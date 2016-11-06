@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3819E32B1DCE69F60004C20B /* ExercisesByDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3819E3291DCE69F60004C20B /* ExercisesByDayView.swift */; };
+		3819E32C1DCE69F60004C20B /* ExercisesByDayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3819E32A1DCE69F60004C20B /* ExercisesByDayView.xib */; };
 		41B003981DC5B1FC00762D2E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B003971DC5B1FC00762D2E /* Exercise.swift */; };
 		A91D9D1A1DCC634F00603AC6 /* StrengthTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */; };
 		A91D9D1E1DCC6C6600603AC6 /* StrengthTileViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3819E3291DCE69F60004C20B /* ExercisesByDayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExercisesByDayView.swift; sourceTree = "<group>"; };
+		3819E32A1DCE69F60004C20B /* ExercisesByDayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExercisesByDayView.xib; sourceTree = "<group>"; };
 		41B003971DC5B1FC00762D2E /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrengthTileView.swift; sourceTree = "<group>"; };
 		A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrengthTileViewUI.xib; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				A9AE2C1F1DC17F9900FB5BC0 /* Assets.xcassets */,
 				A9AE2C211DC17F9900FB5BC0 /* LaunchScreen.storyboard */,
 				A98570601DC2E7FF00C3AA32 /* Main.storyboard */,
+				3819E3291DCE69F60004C20B /* ExercisesByDayView.swift */,
+				3819E32A1DCE69F60004C20B /* ExercisesByDayView.xib */,
 				A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */,
 				A953E22B1DCA8EB00059F78E /* CardioTileViewUI.xib */,
 				A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */,
@@ -280,6 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3819E32C1DCE69F60004C20B /* ExercisesByDayView.xib in Resources */,
 				A98570621DC2E7FF00C3AA32 /* Main.storyboard in Resources */,
 				A91D9D1E1DCC6C6600603AC6 /* StrengthTileViewUI.xib in Resources */,
 				A9AE2C231DC17F9900FB5BC0 /* LaunchScreen.storyboard in Resources */,
@@ -318,6 +325,7 @@
 				A98570641DC315B100C3AA32 /* AddStrengthExercise.swift in Sources */,
 				FA7FB3171DC333BD00781EFB /* ExerciseTileViewController.swift in Sources */,
 				41B003981DC5B1FC00762D2E /* Exercise.swift in Sources */,
+				3819E32B1DCE69F60004C20B /* ExercisesByDayView.swift in Sources */,
 				A91D9D1A1DCC634F00603AC6 /* StrengthTileView.swift in Sources */,
 				A98570661DC315C000C3AA32 /* AddCardioExercise.swift in Sources */,
 				A953E22A1DC98F060059F78E /* CardioTileView.swift in Sources */,

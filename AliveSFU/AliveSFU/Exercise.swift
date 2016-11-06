@@ -9,6 +9,13 @@
 
 import Foundation
 
+//Using enum to define the days in a week to avoid 'magic numbers'
+//The ordering convention follows the Swift NSDate weekday enumeration
+public enum DaysInAWeek : Int
+{
+    case Sunday = 1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+}
+
 class Exercise {
     var exerciseName: String = ""
     var sets: String = ""
@@ -17,7 +24,7 @@ class Exercise {
     var speed: String = ""
     var time: String = ""
     var category: String = ""
-    var day: Int = 0    //A value of 0 corresponds to Sunday, 1 to Monday and so on to 6 being Saturday
+    var day: DaysInAWeek = .Monday
     
     let CATEGORY_CARDIO = "cardio"
     let CATEGORY_STRENGTH = "strength"
@@ -67,9 +74,9 @@ class Exercise {
         resistance = resistance1
     }
 
-    public func setDay(day1: Int)
+    public func setDay(day1: DaysInAWeek)
     {
-        day = day1 % 7    //Using the modulo operator in case the day value is greater than 6 - I really doubt the modulo is neccessary though
+        day = day1
     }
     
     //getters
@@ -101,23 +108,9 @@ class Exercise {
     {
         print(resistance)
     }
-
-    public func printDay()
+    public func getDay() -> DaysInAWeek
     {
-        if (day == 0)
-        {print("Sunday")}
-        else if (day == 1)
-        {print("Monday")}
-        else if (day == 2)
-        {print("Tuesday")}
-        else if (day == 3)
-        {print("Wednesday")}
-        else if (day == 4)
-        {print("Thursday")}
-        else if (day == 5)
-        {print("Friday")}
-        else
-        {print("Saturday")}
+        return day
     }
     
     

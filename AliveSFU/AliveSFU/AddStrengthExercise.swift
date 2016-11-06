@@ -20,7 +20,7 @@ class AddStrengthExercise: UIViewController {
     //Vivek:
     var exerciseDayStrength: Int = 0    //variable that will store the result from what is chosen on the segmented display
     //Vivek: Whenever the segmented display is touched, the int corresponding to the day will
-    //be stored in the variable "exerciseDay"
+    //be stored in the variable "exerciseDayStrength"
 
     @IBAction func theDayStrength(_ sender: UISegmentedControl) {
         exerciseDayStrength = sender.selectedSegmentIndex
@@ -48,7 +48,8 @@ class AddStrengthExercise: UIViewController {
             newExercise.exerciseName = exerciseNameInput.text!
             newExercise.sets = setsInput.text!
             newExercise.reps = repsInput.text!
-            newExercise.setDay(day1: exerciseDayStrength)
+            let day = DaysInAWeek(rawValue: exerciseDayStrength)
+            newExercise.setDay(day1: day!)
             let result = DataHandler.saveElementToExerciseArray(elem: newExercise)
             if (result == -1) {
                 //Handle Error

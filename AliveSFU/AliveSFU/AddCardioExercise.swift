@@ -44,7 +44,8 @@ class AddCardioExercise: UIViewController {
             let newExercise = Exercise()
             newExercise.exerciseName = exerciseNameInput.text!
             newExercise.resistance = resistanceInput.text!
-            newExercise.setDay(day1: exerciseDayCardio)
+            let day = DaysInAWeek(rawValue: exerciseDayCardio)
+            newExercise.setDay(day1: day!)
             newExercise.category = newExercise.CATEGORY_CARDIO
             if (speedInput.text != "") {
                 newExercise.speed = speedInput.text!
