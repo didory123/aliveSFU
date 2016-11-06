@@ -32,19 +32,31 @@ class DataHandler {
             let fetchedResults = try moc.fetch(entityFetchReq) as! [NSManagedObject]
             for result in fetchedResults {
                 let name = result.value(forKey: "exerciseName") as! String
+                let day = result.value(forKey: "day") as! Int
                 let category = result.value(forKey: "category") as! String
-                var elem = Exercise()
-                if (category == elem.CATEGORY_STRENGTH) {
-                    let sets = result.value(forKey: "sets") as! String
-                    let reps = result.value(forKey: "reps") as! String
-                    elem = Exercise(name: name, sets: sets, reps: reps)
-                } else {
+                let completed = result.value(forKey : "completed") as! Bool
+                //Create an exercise instance
+                let newElem = ExerciseFactory.returnExerciseByCategory(type: ExerciseType(rawValue: category)!, exerciseName: name, day: DaysInAWeek(rawValue : day)!, completed: completed)
+                //Being super lazy here, pretty sure actual instantiation logic should happen inside the factory class as well but yolo
+                if (category == ExerciseType.Cardio.rawValue)
+                {
                     let time = result.value(forKey: "time") as! String
                     let resistance = result.value(forKey: "resistance") as! String
                     let speed = result.value(forKey: "speed") as! String
-                    elem = Exercise(name: name, time: time, resistance: resistance, speed: speed)
+                    let elem = newElem as! CardioExercise
+                    elem.resistance = resistance
+                    elem.speed = speed
+                    elem.time = time
                 }
-                exerciseArr.append(elem)
+                else
+                {
+                    let sets = result.value(forKey: "sets") as! String
+                    let reps = result.value(forKey: "reps") as! String
+                    let elem = newElem as! StrengthExercise
+                    elem.reps = reps
+                    elem.sets = sets
+                }
+                exerciseArr.append(newElem)
             }
             return exerciseArr
         } catch {
@@ -78,15 +90,19 @@ class DataHandler {
         let exercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: moc)
         
         exercise.setValue(elem.exerciseName, forKey: "exerciseName")
-        exercise.setValue(elem.category, forKey: "category")
-        if (elem.category == elem.CATEGORY_STRENGTH) {
-            exercise.setValue(elem.sets, forKey: "sets")
-            exercise.setValue(elem.reps, forKey: "reps")
+        exercise.setValue(elem.getType().rawValue, forKey: "category")
+        exercise.setValue(elem.day.rawValue, forKey: "day")
+        exercise.setValue(elem.completed, forKey: "completed")
+        //TODO: Might need to refactor again
+        //The below could be done better, just running out of time
+        if (elem.getType() == .Strength) {
+            exercise.setValue((elem as! StrengthExercise).sets, forKey: "sets")
+            exercise.setValue((elem as! StrengthExercise).reps, forKey: "reps")
             
         } else {
-            exercise.setValue(elem.speed, forKey: "speed")
-            exercise.setValue(elem.resistance, forKey: "resistance")
-            exercise.setValue(elem.time, forKey: "time")
+            exercise.setValue((elem as! CardioExercise).speed, forKey: "speed")
+            exercise.setValue((elem as! CardioExercise).resistance, forKey: "resistance")
+            exercise.setValue((elem as! CardioExercise).time, forKey: "time")
         }
         
         do {
@@ -105,23 +121,11 @@ class DataHandler {
         var dayArray: [Int] = [0, 0, 0, 0, 0, 0, 0]
         let exerciseArray = DataHandler.getExerciseArray()
         for elem in exerciseArray {
-            if (elem.getCompletion() == true && elem.day == 0)
-            {dayArray[0] = dayArray[0] + 1}
-            else if (elem.getCompletion() == true && elem.day == 1)
-            {dayArray[1] = dayArray[1] + 1}
-            else if (elem.getCompletion() == true && elem.day == 2)
-            {dayArray[2] = dayArray[2] + 1}
-            else if (elem.getCompletion() == true && elem.day == 3)
-            {dayArray[3] = dayArray[3] + 1}
-            else if (elem.getCompletion() == true && elem.day == 4)
-            {dayArray[4] = dayArray[4] + 1}
-            else if (elem.getCompletion() == true && elem.day == 5)
-            {dayArray[5] = dayArray[5] + 1}
-            else if (elem.getCompletion() == true && elem.day == 6)
-            {dayArray[6] = dayArray[6] + 1}
-            
-            
-            
+            if (elem.completed == true)
+            {
+                //The days in a week are indexed starting from 1 as per NSDate standards so subtract one
+                dayArray[elem.day.rawValue-1] += 1
+            }
         }
         return dayArray
     }

@@ -18,7 +18,7 @@ class AddStrengthExercise: UIViewController {
     @IBOutlet weak var setsInput: UITextField!
     @IBOutlet weak var repsInput: UITextField!
     //Vivek:
-    var exerciseDayStrength: Int = 0    //variable that will store the result from what is chosen on the segmented display
+    var exerciseDayStrength: Int = 1    //variable that will store the result from what is chosen on the segmented display
     //Vivek: Whenever the segmented display is touched, the int corresponding to the day will
     //be stored in the variable "exerciseDay"
 
@@ -43,12 +43,10 @@ class AddStrengthExercise: UIViewController {
         // Check for valid values like max number of characters that can be entered etc.
         // Create a new object
         if (exerciseNameInput.text != "" && setsInput.text != "" && repsInput.text != "") {
-            let newExercise = Exercise()
-            newExercise.category = newExercise.CATEGORY_STRENGTH
-            newExercise.exerciseName = exerciseNameInput.text!
-            newExercise.sets = setsInput.text!
-            newExercise.reps = repsInput.text!
-            newExercise.setDay(day1: exerciseDayStrength)
+            let newExercise = ExerciseFactory.returnExerciseByCategory(type: ExerciseType.Strength, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayStrength)!, completed: false)
+
+            (newExercise as! StrengthExercise).sets = setsInput.text!
+            (newExercise as! StrengthExercise).reps = repsInput.text!
             let result = DataHandler.saveElementToExerciseArray(elem: newExercise)
             if (result == -1) {
                 //Handle Error

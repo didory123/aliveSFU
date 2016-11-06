@@ -18,7 +18,7 @@ class AddCardioExercise: UIViewController {
     @IBOutlet weak var timeInput: UITextField!
     @IBOutlet weak var resistanceInput: UITextField!
     //Vivek:
-    var exerciseDayCardio: Int = 0
+    var exerciseDayCardio: Int = 1
     //Vivek:
     
 
@@ -39,19 +39,12 @@ class AddCardioExercise: UIViewController {
     //Mark: Action
 
     @IBAction func saveButton(_ sender: UIButton) {
-        if ((exerciseNameInput.text != "") && (timeInput.text != ""))
+        if ((exerciseNameInput.text != "") && (timeInput.text != "") && (speedInput.text != "") && (resistanceInput.text != "") )
         {
-            let newExercise = Exercise()
-            newExercise.exerciseName = exerciseNameInput.text!
-            newExercise.resistance = resistanceInput.text!
-            newExercise.setDay(day1: exerciseDayCardio)
-            newExercise.category = newExercise.CATEGORY_CARDIO
-            if (speedInput.text != "") {
-                newExercise.speed = speedInput.text!
-            }
-            if (timeInput.text != "") {
-                newExercise.time = timeInput.text!
-            }
+            let newExercise = ExerciseFactory.returnExerciseByCategory(type: .Cardio, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayCardio)!, completed: false)
+            (newExercise as! CardioExercise).speed = speedInput.text!
+            (newExercise as! CardioExercise).resistance = resistanceInput.text!
+            (newExercise as! CardioExercise).time = timeInput.text!
             let result = DataHandler.saveElementToExerciseArray(elem: newExercise)
             if (result == -1) {
                 //Handle Error

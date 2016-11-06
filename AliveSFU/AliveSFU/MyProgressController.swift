@@ -129,7 +129,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     }
     
     @IBAction func showPopup(_ sender: UITapGestureRecognizer) {
-        
+
         if (sender.view?.tag == CATEGORY_CARDIO_VIEW_TAG) {
             let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "cardioTilePopover") as! PopoverCardioTile
             self.addChildViewController(popoverVC)
@@ -181,17 +181,17 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
             
             for elem in exerciseArray {
                 
-                let frame = CGRect(x: 0, y: CGFloat(contentView.subviews.count - 1) * 85, width: scrollView.bounds.width, height: TILE_HEIGHT)
+                let frame = CGRect(x: 0, y: CGFloat(contentView.subviews.count) * 85, width: scrollView.bounds.width, height: TILE_HEIGHT)
                 
-                if (elem.category == elem.CATEGORY_CARDIO) {
-                    let tile = CardioTileView(frame: frame, name: elem.exerciseName, time: elem.time, speed: elem.speed, resistance: elem.resistance)
+                if (elem.getType() == .Cardio) {
+                    let tile = CardioTileView(frame: frame, name: elem.exerciseName, time: (elem as! CardioExercise).time, speed: (elem as! CardioExercise).speed, resistance: (elem as! CardioExercise).resistance)
                     tile.tag = CATEGORY_CARDIO_VIEW_TAG
                     let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showPopup(_:)))
                     tile.addGestureRecognizer(tapGesture)
                     
                     contentView.addSubview(tile)
                 } else {
-                    let tile = StrengthTileView(frame: frame, name: elem.exerciseName, sets: elem.sets, reps: elem.reps)
+                    let tile = StrengthTileView(frame: frame, name: elem.exerciseName, sets: (elem as! StrengthExercise).sets, reps: (elem as! StrengthExercise).reps)
                     tile.tag = CATEGORY_STRENGTH_VIEW_TAG
                     let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showPopup(_:)))
                     tile.addGestureRecognizer(tapGesture)
