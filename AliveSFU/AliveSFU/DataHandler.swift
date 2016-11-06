@@ -32,11 +32,13 @@ class DataHandler {
             for result in fetchedResults {
                 let name = result.value(forKey: "exerciseName") as! String
                 let category = result.value(forKey: "category") as! String
+                let exerciseDay = result.value(forKey: "day") as! Int
                 var elem = Exercise()
+                elem.setDay(day: DaysInAWeek(rawValue: exerciseDay)!)
                 if (category == elem.CATEGORY_STRENGTH) {
                     let sets = result.value(forKey: "sets") as! String
                     let reps = result.value(forKey: "reps") as! String
-                    elem = Exercise(name: name, sets: sets, reps: reps)
+                    //elem = Exercise(name: name, sets: sets, reps: reps)
                 } else {
                     let time = result.value(forKey: "time") as! String
                     let resistance = result.value(forKey: "resistance") as! String
@@ -78,6 +80,7 @@ class DataHandler {
         
         exercise.setValue(elem.exerciseName, forKey: "exerciseName")
         exercise.setValue(elem.category, forKey: "category")
+        exercise.setValue(elem.day, forKey: "day")
         if (elem.category == elem.CATEGORY_STRENGTH) {
             exercise.setValue(elem.sets, forKey: "sets")
             exercise.setValue(elem.reps, forKey: "reps")

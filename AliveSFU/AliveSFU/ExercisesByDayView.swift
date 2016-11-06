@@ -13,8 +13,8 @@ class ExercisesByDayView: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
-    var day : Int = 0
-    convenience init( day : Int ) {
+    var day : DaysInAWeek = DaysInAWeek.Sunday
+    convenience init( day : DaysInAWeek ) {
         self.init()
         self.day = day
     }
@@ -42,7 +42,7 @@ class ExercisesByDayView: UIViewController {
             let exerciseArray = DataHandler.getExerciseArray()
             
             for elem in exerciseArray {
-                if (elem.day.rawValue == day)
+                if (elem.day == day.rawValue)
                 {
                     if (elem.category == elem.CATEGORY_CARDIO) {
                         let tile = CardioTileView(name: elem.exerciseName, time: elem.time, speed: elem.speed, resistance: elem.resistance)

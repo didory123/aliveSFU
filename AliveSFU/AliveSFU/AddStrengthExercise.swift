@@ -48,8 +48,8 @@ class AddStrengthExercise: UIViewController {
             newExercise.exerciseName = exerciseNameInput.text!
             newExercise.sets = setsInput.text!
             newExercise.reps = repsInput.text!
-            let day = DaysInAWeek(rawValue: exerciseDayStrength)
-            newExercise.setDay(day1: day!)
+            let day = DaysInAWeek(rawValue: exerciseDayStrength + 1)
+            newExercise.setDay(day: day!)
             let result = DataHandler.saveElementToExerciseArray(elem: newExercise)
             if (result == -1) {
                 //Handle Error

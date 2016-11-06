@@ -86,28 +86,39 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mp2-4c-jFc">
-                                <rect key="frame" x="16" y="174" width="343" height="436"/>
+                                <rect key="frame" x="16" y="209" width="343" height="401"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxY-gC-6PN">
+                                <rect key="frame" x="83" y="180" width="209" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="BqK-2W-GwH" firstAttribute="top" secondItem="mp2-4c-jFc" secondAttribute="bottom" constant="8" symbolic="YES" id="2II-oM-pEu"/>
+                            <constraint firstItem="mp2-4c-jFc" firstAttribute="leading" secondItem="ud5-vu-E9k" secondAttribute="leading" id="ApY-ls-xMB"/>
                             <constraint firstAttribute="leadingMargin" secondItem="nEn-kv-wAx" secondAttribute="leading" id="GFl-QZ-9hk"/>
                             <constraint firstItem="ud5-vu-E9k" firstAttribute="top" secondItem="nEn-kv-wAx" secondAttribute="bottom" constant="20" id="Hue-As-rlE"/>
+                            <constraint firstItem="mp2-4c-jFc" firstAttribute="trailing" secondItem="ud5-vu-E9k" secondAttribute="trailing" id="Jhy-B9-dfV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ud5-vu-E9k" secondAttribute="leading" id="KXF-Tx-whK"/>
-                            <constraint firstItem="mp2-4c-jFc" firstAttribute="trailing" secondItem="ud5-vu-E9k" secondAttribute="trailing" id="Tqn-lc-XoH"/>
+                            <constraint firstItem="BqK-2W-GwH" firstAttribute="top" secondItem="mp2-4c-jFc" secondAttribute="bottom" constant="8" symbolic="YES" id="LQt-cy-fQn"/>
+                            <constraint firstItem="cxY-gC-6PN" firstAttribute="top" secondItem="ud5-vu-E9k" secondAttribute="bottom" constant="21" id="OYz-PT-eFO"/>
                             <constraint firstItem="nEn-kv-wAx" firstAttribute="top" secondItem="ne0-Tp-18N" secondAttribute="bottom" constant="8" id="VzS-NO-c4h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ud5-vu-E9k" secondAttribute="trailing" id="cah-Ef-4bf"/>
                             <constraint firstItem="BqK-2W-GwH" firstAttribute="top" secondItem="ud5-vu-E9k" secondAttribute="bottom" constant="459" id="fFy-kb-aKd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nEn-kv-wAx" secondAttribute="trailing" id="g7m-w2-6Sy"/>
-                            <constraint firstItem="mp2-4c-jFc" firstAttribute="leading" secondItem="ud5-vu-E9k" secondAttribute="leading" id="lWp-Uv-u2d"/>
-                            <constraint firstItem="mp2-4c-jFc" firstAttribute="top" secondItem="ud5-vu-E9k" secondAttribute="bottom" constant="15" id="mqL-eB-Lba"/>
+                            <constraint firstItem="mp2-4c-jFc" firstAttribute="top" secondItem="cxY-gC-6PN" secondAttribute="bottom" constant="8" symbolic="YES" id="mMP-Gp-u53"/>
+                            <constraint firstItem="cxY-gC-6PN" firstAttribute="leading" secondItem="MPo-5d-xX5" secondAttribute="leadingMargin" constant="67" id="ohP-kC-rKq"/>
+                            <constraint firstItem="cxY-gC-6PN" firstAttribute="centerX" secondItem="ud5-vu-E9k" secondAttribute="centerX" id="wT6-Jt-CDP"/>
                             <constraint firstItem="BqK-2W-GwH" firstAttribute="top" secondItem="nEn-kv-wAx" secondAttribute="bottom" constant="512" id="zYv-KU-kZF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ckg-TK-IUo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="DayLabel" destination="cxY-gC-6PN" id="Siv-7Y-D28"/>
+                        <outlet property="View" destination="MPo-5d-xX5" id="5Hy-Ki-VVq"/>
                         <outlet property="scrollView" destination="mp2-4c-jFc" id="oNB-uw-etQ"/>
                     </connections>
                 </viewController>

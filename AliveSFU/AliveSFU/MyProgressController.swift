@@ -12,9 +12,11 @@ import CoreData
 
 class MyProgressController: UIViewController {
     
+    @IBOutlet weak var dayLabel: UILabel!
     //Array containing the 7 exercise views by day
     var viewsByDay : [ExercisesByDayView] = []
-    
+    var currDay : Int = 1
+    var currView: UIViewController! = nil
     @IBOutlet weak var scrollView: UIScrollView!
     //@IBOutlet weak var scrollView: UIScrollView!
     //Defining outlet for scrollview handling horizontal swipes
@@ -24,20 +26,18 @@ class MyProgressController: UIViewController {
     //I am populating the exercise view array in the init() since we only want to call it once in this object's lifecycle
     convenience init()
     {
-        self.init(nibName:nil, bundle:nil)
+        self.init()
 
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let calendar = NSCalendar.current
         let date = NSDate()
-        let currDay = calendar.component(.weekday, from: date as Date)
-        
+        currDay = calendar.component(.weekday, from: date as Date)
         //Populate array
-        for i in 0...6 {
-            let newView : ExercisesByDayView = ExercisesByDayView(day : currDay)               //ExercisesByDayView(nibName: "ExercisesByDayView", bundle: nil)
+        for i in 1...7 {
+            let newView : ExercisesByDayView = ExercisesByDayView(day : DaysInAWeek(rawValue: i)!)               //ExercisesByDayView(nibName: "ExercisesByDayView", bundle: nil)
             self.addChildViewController(newView)
             viewsByDay.append(newView)
             /*self.containerView.addSubview(newView.view) //adding this newly created view to the scroll view that is used to implement swiping
@@ -62,31 +62,116 @@ class MyProgressController: UIViewController {
         view.addGestureRecognizer(leftEdge)
         view.addGestureRecognizer(rightEdge)
         
-        let currView = viewsByDay[currDay-1]
-        self.scrollView.addSubview(currView.view)
-        currView.didMove(toParentViewController: self)
-        
-        var newFrame : CGRect = currView.view.frame
-        newFrame.origin.x = currView.view.frame.origin.x
-        currView.view.frame = newFrame
-
-        scrollView.contentSize = CGSize(width: currView.view.frame.width, height: currView.view.frame.height)
-
+        addDayViewToScrollView(dayToDisplay: DaysInAWeek(rawValue: currDay)!)
         // Do any additional setup after loading the view, typically from a nib.
 
     }
+    
+    //Takes in the integer index of the desired day to display on page
+    func addDayViewToScrollView(dayToDisplay : DaysInAWeek)
+    {
+        let newView = viewsByDay[dayToDisplay.rawValue - 1]
+        
+        scrollView.addSubview(newView.view)
+        newView.didMove(toParentViewController: self)
+        
+        var newFrame : CGRect = newView.view.frame
+        newFrame.origin.x = newView.view.frame.origin.x
+        newView.view.frame = newFrame
+        
+        scrollView.contentSize = CGSize(width: newView.view.frame.width, height: newView.view.frame.height)
+        dayLabel.text = DaysInAWeek(rawValue: currDay)!.name
+        currView = newView
 
+    }
+    
+    //Overloaded function for adding day view to scrollview buth with animation when swipe is detected
+    func addDayViewToScrollView(dayToDisplay : DaysInAWeek, direction : UIRectEdge)
+    {
+        scrollView.contentSize = CGSize(width: currView.view.frame.width + currView.view.frame.width, height: currView.view.frame.height)
+        
+        let newView = viewsByDay[dayToDisplay.rawValue - 1]
+        scrollView.addSubview(newView.view)
+        if (direction == .right)
+        {            
+            var newFrame : CGRect = newView.view.frame
+            newFrame.origin.x = currView.view.frame.origin.x + currView.view.frame.width
+            newView.view.frame = newFrame
+            
+            //scrollView.frame.origin.x += scrollView.frame.origin.x
+            UIView.animate(withDuration: 0.5, animations: {
+                self.currView.view.center.x -= self.currView.view.frame.width
+            })
+            UIView.animate(withDuration: 0.5, animations: {
+                newView.view.center.x -= newView.view.frame.width
+            })
+            currView.view.removeFromSuperview()
+            currView = newView
+            scrollView.contentSize = CGSize(width: currView.view.frame.width, height: currView.view.frame.height)
 
+        }
+        else
+        {
+            var newFrame : CGRect = newView.view.frame
+            newFrame.origin.x = currView.view.frame.origin.x - currView.view.frame.width
+            newView.view.frame = newFrame
+            
+            //scrollView.frame.origin.x += scrollView.frame.origin.x
+            UIView.animate(withDuration: 0.5, animations: {
+                self.currView.view.center.x += self.currView.view.frame.width
+            })
+            UIView.animate(withDuration: 0.5, animations: {
+                newView.view.center.x += newView.view.frame.width
+            })
+            currView.view.removeFromSuperview()
+            currView = newView
+            scrollView.contentSize = CGSize(width: currView.view.frame.width, height: currView.view.frame.height)
+        }
+    }
     
     func handleSwipes(_ recognizer: UIScreenEdgePanGestureRecognizer){
         
         if (recognizer.state == .recognized) {
-            if(recognizer.edges == .left) {
-                print("Swipe Right from left edge ")//dummy code
+            if(recognizer.edges == .left)
+            {
+                //Remove preexisting view
+                /*for view in scrollView.subviews
+                {
+                    view.removeFromSuperview()
+                }*/
+                
+                //If the page is at Sunday, swiping left should get you to Saturday
+                if (currDay == DaysInAWeek.Sunday.rawValue)
+                {
+                    currDay = DaysInAWeek.Saturday.rawValue
+                    addDayViewToScrollView(dayToDisplay: DaysInAWeek.Saturday, direction : .left)
+                    
                 }
+                else
+                {
+                    currDay -= 1
+                    addDayViewToScrollView(dayToDisplay: DaysInAWeek(rawValue: currDay)!, direction : .left)
+                }
+            }
             if(recognizer.edges == .right) {
-                print("Swipe Left from right edge") //dummy code
+                //Remove preexisting view
+                /*for view in scrollView.subviews
+                {
+                    view.removeFromSuperview()
+                }*/
+                
+                //If the page is at Saturday, swiping right should get you to Sunday
+                if (currDay == DaysInAWeek.Saturday.rawValue)
+                {
+                    currDay = DaysInAWeek.Sunday.rawValue
+                    addDayViewToScrollView(dayToDisplay: DaysInAWeek.Sunday, direction : .right)
                 }
+                else
+                {
+                    currDay += 1
+                    addDayViewToScrollView(dayToDisplay: DaysInAWeek(rawValue: currDay)!, direction : .right)
+                }
+            }
         }
         //NEED TO GET ARRAY DATA AND CHANGE TILES IN THE VIEW CONTROLLER
     }

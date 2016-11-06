@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // TODO - Remove this!!!!!!
-        //DataHandler.deleteExerciseArray()
+        DataHandler.deleteExerciseArray()
         
         
         return true

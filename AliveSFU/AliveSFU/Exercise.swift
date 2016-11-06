@@ -14,6 +14,18 @@ import Foundation
 public enum DaysInAWeek : Int
 {
     case Sunday = 1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
+    var name : String {
+        switch self {
+        // Use Internationalization, as appropriate.
+        case .Sunday: return "Sunday";
+        case .Monday: return "Monday";
+        case .Tuesday: return "Tuesday";
+        case .Wednesday: return "Wednesday";
+        case .Thursday: return "Thursday";
+        case .Friday: return "Friday";
+        case .Saturday: return "Saturday";
+        }
+    }
 }
 
 class Exercise {
@@ -24,7 +36,7 @@ class Exercise {
     var speed: String = ""
     var time: String = ""
     var category: String = ""
-    var day: DaysInAWeek = .Monday
+    var day: Int = DaysInAWeek.Sunday.rawValue
     
     let CATEGORY_CARDIO = "cardio"
     let CATEGORY_STRENGTH = "strength"
@@ -74,9 +86,9 @@ class Exercise {
         resistance = resistance1
     }
 
-    public func setDay(day1: DaysInAWeek)
+    public func setDay(day: DaysInAWeek)
     {
-        day = day1
+        self.day = day.rawValue
     }
     
     //getters
@@ -108,7 +120,7 @@ class Exercise {
     {
         print(resistance)
     }
-    public func getDay() -> DaysInAWeek
+    public func getDay() -> Int
     {
         return day
     }
