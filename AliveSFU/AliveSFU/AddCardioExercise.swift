@@ -41,8 +41,11 @@ class AddCardioExercise: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         if ((exerciseNameInput.text != "") && (timeInput.text != "") && (speedInput.text != "") && (resistanceInput.text != "") )
         {
+            //fairly certain that generating the uuid here and passing it to factory is an example of dependency injection and therefore good programming standards
+            let uuid = NSUUID().uuidString //generate a unique UUID to use as indexing key for this exercise
+            
             //remember to increment exerciseDayCardio by 1 because the NSDate indexing for weekdays start at 1
-            let newExercise = ExerciseFactory.returnExerciseByCategory(type: .Cardio, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayCardio+1)!, completed: false)
+            let newExercise = ExerciseFactory.returnExerciseByCategory(type: .Cardio, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayCardio+1)!, completed: false, id : uuid)
             (newExercise as! CardioExercise).speed = speedInput.text!
             (newExercise as! CardioExercise).resistance = resistanceInput.text!
             (newExercise as! CardioExercise).time = timeInput.text!

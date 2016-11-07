@@ -43,8 +43,12 @@ class AddStrengthExercise: UIViewController {
         // Check for valid values like max number of characters that can be entered etc.
         // Create a new object
         if (exerciseNameInput.text != "" && setsInput.text != "" && repsInput.text != "") {
+            
+            //fairly certain that generating the uuid here and passing it to factory is an example of dependency injection and therefore good programming standards
+            let uuid = NSUUID().uuidString //generate a unique UUID to use as indexing key for this exercise
+            
             //remember to increment exerciseDayCardio by 1 because the NSDate indexing for weekdays start at 1
-            let newExercise = ExerciseFactory.returnExerciseByCategory(type: ExerciseType.Strength, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayStrength+1)!, completed: false)
+            let newExercise = ExerciseFactory.returnExerciseByCategory(type: ExerciseType.Strength, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayStrength+1)!, completed: false, id : uuid)
 
             (newExercise as! StrengthExercise).sets = setsInput.text!
             (newExercise as! StrengthExercise).reps = repsInput.text!

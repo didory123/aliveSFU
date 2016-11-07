@@ -9,6 +9,8 @@
 import UIKit
 
 class CardioTileView: UIView {
+    
+    var uuid : String = ""
     @IBOutlet var view: UIView!
     
     @IBOutlet weak var exerciseName: UILabel!

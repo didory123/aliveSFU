@@ -78,10 +78,6 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
         _ = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(MyProgressController.showChart), userInfo: nil, repeats: false)
     }
     @IBAction func dayValueChangeEvent(_ sender: UISegmentedControl) {
-        for view in contentView.subviews
-        {
-            view.removeFromSuperview()
-        }
         var changedIndex = sender.selectedSegmentIndex
         currDay = DaysInAWeek(rawValue: changedIndex + 1)!
         populateStackView()
@@ -122,9 +118,11 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
             self.addChildViewController(popoverVC)
             popoverVC.view.frame = self.view.frame
             popoverVC.view.tag = 600
+            popoverVC.rootViewController = self
             self.view.addSubview(popoverVC.view)
             
             let tile = sender.view as! CardioTileView
+            popoverVC.uuid = tile.uuid
             popoverVC.exerciseName.text = tile.exerciseName.text
             popoverVC.time.text = tile.time.text
             popoverVC.speed.text = tile.speed.text
@@ -135,9 +133,11 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
             let popoverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "strengthTilePopover") as! PopoverStrengthTile
             self.addChildViewController(popoverVC)
             popoverVC.view.frame = self.view.frame
+            popoverVC.rootViewController = self
             self.view.addSubview(popoverVC.view)
             
             let tile = sender.view as! StrengthTileView
+            popoverVC.uuid = tile.uuid
             popoverVC.exerciseName.text = tile.exerciseName.text
             popoverVC.sets.text = tile.sets.text
             popoverVC.reps.text = tile.reps.text
@@ -149,10 +149,6 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
     //Post condition: should change the currently displayed page
     func handleSwipes(_ recognizer: UIScreenEdgePanGestureRecognizer){
         if (recognizer.state == .recognized) {
-            //since the view is now changed, get rid of all preexisting subviews
-            for view in contentView.subviews {
-                view.removeFromSuperview()
-            }
             if(recognizer.edges == .left) {
                 UIView.animate(withDuration: 0.5, animations: {
                     self.contentView.center.x += self.contentView.frame.width
@@ -192,10 +188,20 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
         }
     }
     
+    //Function that handles the reloading of My Progress page when something is updated from another view
+    //e.g. when a tile is changed, this function is called to update the changed tiles and the graphs
+    func handleReloading()
+    {
+        populateStackView()
+    }
     
     //Function for populating the exercise tiles
     //TODO: there's some magic numbers in here, should consider using constants (or 'let' in this newfangled language???)
     func populateStackView() {
+        //since the view is now changed, get rid of all preexisting subviews
+        for view in contentView.subviews {
+            view.removeFromSuperview()
+        }
         let exerciseArrayCount = DataHandler.getExerciseArrayCount()
         if (exerciseArrayCount == 0) {
             //Display Placeholder Exercise Tile
@@ -213,6 +219,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
                     if (elem.getType() == .Cardio) {
                         let tile = CardioTileView(frame: frame, name: elem.exerciseName, time: (elem as! CardioExercise).time, speed: (elem as! CardioExercise).speed, resistance: (elem as! CardioExercise).resistance)
                         tile.tag = CATEGORY_CARDIO_VIEW_TAG
+                        tile.uuid = elem.id
                         let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showPopup(_:)))
                         tile.addGestureRecognizer(tapGesture)
                         
@@ -220,6 +227,7 @@ class MyProgressController: UIViewController, JBBarChartViewDelegate, JBBarChart
                     } else {
                         let tile = StrengthTileView(frame: frame, name: elem.exerciseName, sets: (elem as! StrengthExercise).sets, reps: (elem as! StrengthExercise).reps)
                         tile.tag = CATEGORY_STRENGTH_VIEW_TAG
+                        tile.uuid = elem.id
                         let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showPopup(_:)))
                         tile.addGestureRecognizer(tapGesture)
                         

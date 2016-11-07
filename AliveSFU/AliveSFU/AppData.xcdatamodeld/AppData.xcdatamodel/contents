@@ -8,6 +8,7 @@
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="exerciseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="reps" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="resistance" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sets" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,6 +17,6 @@
     </entity>
     <elements>
         <element name="Count" positionX="-54" positionY="18" width="128" height="60"/>
-        <element name="Exercise" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="Exercise" positionX="-63" positionY="-18" width="128" height="195"/>
     </elements>
 </model>

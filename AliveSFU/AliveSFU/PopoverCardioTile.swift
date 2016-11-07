@@ -11,6 +11,8 @@ import CoreData
 
 class PopoverCardioTile: UIViewController {
     
+    var currCardioExercise : CardioExercise? = nil
+    var uuid : String = ""
     @IBOutlet weak var exerciseName: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var speed: UILabel!
@@ -31,7 +33,7 @@ class PopoverCardioTile: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     
-    weak var myProgressViewController: MyProgressController?
+    weak var rootViewController: MyProgressController? //TODO: find something more elegant
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +66,8 @@ class PopoverCardioTile: UIViewController {
         
         let name1: String = exerciseName.text!
         let _res = DataHandler.deleteElementFromExerciseArray(name: name1)
-        myProgressViewController?.populateStackView()
+        //reload the myProgress page
+        //self.view.superview?.setNeedsDisplay()
         removeAnimate()
         
     }
@@ -78,22 +81,18 @@ class PopoverCardioTile: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         
         //pass new values here
-        
         let originalExerciseName: String = exerciseName.text!
         
-        let newExerciseObject = Exercise()
-        
-        newExerciseObject.category = newExerciseObject.CATEGORY_CARDIO
-        newExerciseObject.exerciseName = exerciseNameTextField.text!
-      
+        //The day field and completed field are not necessary for the function, so we're passing in arbitrary numbers
+        let newExerciseObject = CardioExercise(exerciseName: exerciseNameTextField.text!, day: .Sunday, completed: false, id : uuid)
         newExerciseObject.time = timeTextField.text!
         newExerciseObject.speed = speedTextField.text!
         newExerciseObject.resistance = resistanceTextField.text!
+        self.view.superview?.setNeedsDisplay()
+        let _ = DataHandler.saveExerciseChanges(elem: newExerciseObject)
         
-        let _ = DataHandler.saveExerciseChanges(elem: newExerciseObject, name: originalExerciseName)
-        
-        myProgressViewController?.populateStackView()
-        
+        //reload the myProgress page
+        //self.view.superview?.setNeedsDisplay()
         removeAnimate()
         
         
@@ -118,6 +117,7 @@ class PopoverCardioTile: UIViewController {
             }, completion:{(finished : Bool) in
                 if (finished)
                 {
+                    self.rootViewController!.handleReloading() //reload My Progress page
                     self.view.removeFromSuperview()
                 }
         });

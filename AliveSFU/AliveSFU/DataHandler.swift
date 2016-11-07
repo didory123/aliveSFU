@@ -31,12 +31,13 @@ class DataHandler {
         do {
             let fetchedResults = try moc.fetch(entityFetchReq) as! [NSManagedObject]
             for result in fetchedResults {
+                let id = result.value(forKey: "id") as! String
                 let name = result.value(forKey: "exerciseName") as! String
                 let day = result.value(forKey: "day") as! Int
                 let category = result.value(forKey: "category") as! String
                 let completed = result.value(forKey : "completed") as! Bool
                 //Create an exercise instance
-                let newElem = ExerciseFactory.returnExerciseByCategory(type: ExerciseType(rawValue: category)!, exerciseName: name, day: DaysInAWeek(rawValue : day)!, completed: completed)
+                let newElem = ExerciseFactory.returnExerciseByCategory(type: ExerciseType(rawValue: category)!, exerciseName: name, day: DaysInAWeek(rawValue : day)!, completed: completed, id : id)
                 //Being super lazy here, pretty sure actual instantiation logic should happen inside the factory class as well but yolo
                 if (category == ExerciseType.Cardio.rawValue)
                 {
@@ -113,6 +114,7 @@ class DataHandler {
         //let entity = NSEntityDescription.entity(forEntityName: "Exercise", in: moc)
         let exercise = NSEntityDescription.insertNewObject(forEntityName: "Exercise", into: moc)
         
+        exercise.setValue(elem.id, forKey: "id")
         exercise.setValue(elem.exerciseName, forKey: "exerciseName")
         exercise.setValue(elem.getType().rawValue, forKey: "category")
         exercise.setValue(elem.day.rawValue, forKey: "day")
@@ -140,62 +142,39 @@ class DataHandler {
     
     //save changes to exercise array in popover
     //go to exercise array, find the element we are changing and change the attribute to the new one
-    class func saveExerciseChanges(elem: Exercise, name: String) -> Int {
+    class func saveExerciseChanges(elem: Exercise) -> Int {
       
         let moc = AppDataController().managedObjectContext
        
         //get access to Exercise entity
         let entityFetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
         
-        let predicate = NSPredicate(format: "exerciseName = %@",name)
+        let predicate = NSPredicate(format: "id = %@", elem.id)
         
         //now entityFetch req will contain only those elements that match the predicate condition
         entityFetchReq.predicate = predicate
         
         do {
-            //get exerciseArray element where exerciseName = name
-            
-            
+            //get exerciseArray element where exercise id matches
+
             var fetchedResult = try moc.fetch(entityFetchReq) as! [NSManagedObject]
             
                 let exercise = fetchedResult[0]
                 
                 // Strength
-                if (elem.category == elem.CATEGORY_STRENGTH) {
+                if (elem.getType() == ExerciseType.Strength) {
                     
-                    if elem.exerciseName != "" {
-                        exercise.setValue(elem.exerciseName, forKey: "exerciseName")
-                    }
-                    
-                    if elem.sets != "" {
-                        exercise.setValue(elem.sets, forKey: "sets")
-                    }
-                    
-                    if elem.reps != "" {
-                        exercise.setValue(elem.reps, forKey: "reps")
-                    }
-                
+                    exercise.setValue(elem.exerciseName, forKey: "exerciseName")
+                    exercise.setValue((elem as! StrengthExercise).sets, forKey: "sets")
+                    exercise.setValue((elem as! StrengthExercise).reps, forKey: "reps")
                 }
-                
                 // Cardio
                 else {
                 
-                    if elem.exerciseName != "" {
-                        exercise.setValue(elem.exerciseName, forKey: "exerciseName")
-                    }
-                
-                    if elem.speed != "" {
-                        exercise.setValue(elem.speed, forKey: "speed")
-                    }
-                
-                    if elem.resistance != "" {
-                        exercise.setValue(elem.resistance, forKey: "resistance")
-                    }
-                
-                    if elem.time != "" {
-                        exercise.setValue(elem.time, forKey: "time")
-                    }
-                
+                    exercise.setValue(elem.exerciseName, forKey: "exerciseName")
+                    exercise.setValue((elem as! CardioExercise).speed, forKey: "speed")
+                    exercise.setValue((elem as! CardioExercise).resistance, forKey: "resistance")
+                    exercise.setValue((elem as! CardioExercise).time, forKey: "time")
                 }
 
             try moc.save()

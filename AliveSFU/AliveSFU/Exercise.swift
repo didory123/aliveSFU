@@ -46,13 +46,13 @@ public enum DaysInAWeek : Int
 public class ExerciseFactory
 {
     //Instantiates the right exercise object by category
-    static func returnExerciseByCategory(type : ExerciseType, exerciseName : String, day : DaysInAWeek, completed : Bool) -> Exercise
+    static func returnExerciseByCategory(type : ExerciseType, exerciseName : String, day : DaysInAWeek, completed : Bool, id : String) -> Exercise
     {
         switch type {
         case .Strength:
-            return StrengthExercise(exerciseName : exerciseName, day : day, completed : completed)
+            return StrengthExercise(exerciseName : exerciseName, day : day, completed : completed, id : id)
         case .Cardio:
-            return CardioExercise(exerciseName : exerciseName, day : day, completed : completed)
+            return CardioExercise(exerciseName : exerciseName, day : day, completed : completed, id : id)
         }
     }
 }
@@ -65,24 +65,27 @@ public enum ExerciseType : String {
 //Using a protocol type for exercise
 //There is a possibility that exercise types will get expanded in the future, using inheritance will open the class up for possible extension
 protocol Exercise {
+    var id : String { get }
     var exerciseName: String { get set }
     var day: DaysInAWeek { get set }
     var completed: Bool { get set }
-    init(exerciseName : String, day : DaysInAWeek, completed : Bool)
+    init(exerciseName : String, day : DaysInAWeek, completed : Bool, id: String)
     func getType() -> ExerciseType
     
 }
 
 //Strength exercise class
 class StrengthExercise : Exercise {
+    internal var id: String = ""
     internal var exerciseName: String = ""
     internal var completed : Bool = false
     internal var day : DaysInAWeek = .Sunday
     
     internal var sets : String = ""
     internal var reps : String = ""
-    required init(exerciseName : String, day : DaysInAWeek, completed : Bool)
+    required init(exerciseName : String, day : DaysInAWeek, completed : Bool, id: String)
     {
+        self.id = id
         self.exerciseName = exerciseName
         self.day = day
         self.completed = completed
@@ -94,6 +97,7 @@ class StrengthExercise : Exercise {
 
 //Cardio exercise class
 class CardioExercise : Exercise {
+    internal var id: String = ""
     internal var exerciseName: String = ""
     internal var completed : Bool = false
     internal var day : DaysInAWeek = .Sunday
@@ -101,8 +105,9 @@ class CardioExercise : Exercise {
     internal var time : String = ""
     internal var resistance : String = ""
     internal var speed : String = ""
-    required init(exerciseName : String, day : DaysInAWeek, completed : Bool)
+    required init(exerciseName : String, day : DaysInAWeek, completed : Bool, id: String)
     {
+        self.id = id
         self.exerciseName = exerciseName
         self.day = day
         self.completed = completed

@@ -12,6 +12,7 @@ import UIKit
 
 class PopoverStrengthTile: UIViewController {
 
+    var uuid : String = ""
     @IBOutlet weak var reps: UILabel!
     @IBOutlet weak var sets: UILabel!
     @IBOutlet weak var exerciseName: UILabel!
@@ -27,8 +28,7 @@ class PopoverStrengthTile: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
-    
-    weak var myProgressViewController: MyProgressController?
+    weak var rootViewController: MyProgressController? //TODO: find something more elegant
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,14 +55,12 @@ class PopoverStrengthTile: UIViewController {
         repsTextField.text = reps.text
         showEditable(yes: true)
     }
-    
 
     
     @IBAction func deleteButton(_ sender: UIButton) {
         
         let name1: String = exerciseName.text!
         let _res = DataHandler.deleteElementFromExerciseArray(name: name1)
-        myProgressViewController?.populateStackView()
         removeAnimate()
     }
    
@@ -72,21 +70,18 @@ class PopoverStrengthTile: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        
         //pass new values here
         
         let originalExerciseName: String = exerciseName.text!
         
-        let newExerciseObject = Exercise()
-        
-        newExerciseObject.category = newExerciseObject.CATEGORY_STRENGTH
+        //The day field and completed field are not necessary for the function, so we're passing in arbitrary numbers
+        let newExerciseObject = StrengthExercise(exerciseName: exerciseNameTextField.text!, day: .Sunday, completed: false, id : uuid)
         newExerciseObject.exerciseName = exerciseNameTextField.text!
-     
         newExerciseObject.sets = setsTextField.text!
         newExerciseObject.reps = repsTextField.text!
         
-        let _ = DataHandler.saveExerciseChanges(elem: newExerciseObject, name: originalExerciseName)
-        myProgressViewController?.populateStackView()
+        let _ = DataHandler.saveExerciseChanges(elem: newExerciseObject)
+        
         removeAnimate()
         
     }
@@ -111,6 +106,7 @@ class PopoverStrengthTile: UIViewController {
         }, completion:{(finished : Bool) in
             if (finished)
             {
+                self.rootViewController!.handleReloading() //reload My Progress page
                 self.view.removeFromSuperview()
             }
         });
