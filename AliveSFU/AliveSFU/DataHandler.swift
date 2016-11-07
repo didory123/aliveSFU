@@ -66,15 +66,14 @@ class DataHandler {
         
     }
     
-    class func deleteElementFromExerciseArray(name: String) -> Int {
+    class func deleteElementFromExerciseArray(id: String) -> Int {
         
- 
         let moc = AppDataController().managedObjectContext
     
         //get access to Exercise entity
         let entityFetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
        
-        let predicate = NSPredicate(format: "exerciseName = %@",name)
+        let predicate = NSPredicate(format: "id = %@",id)
         entityFetchReq.predicate = predicate
        
         do {
@@ -148,29 +147,24 @@ class DataHandler {
        
         //get access to Exercise entity
         let entityFetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Exercise")
-        
         let predicate = NSPredicate(format: "id = %@", elem.id)
         
         //now entityFetch req will contain only those elements that match the predicate condition
         entityFetchReq.predicate = predicate
         
         do {
-            //get exerciseArray element where exercise id matches
-
+            //get exerciseArray element where exercise id matched
             var fetchedResult = try moc.fetch(entityFetchReq) as! [NSManagedObject]
-            
                 let exercise = fetchedResult[0]
                 
                 // Strength
                 if (elem.getType() == ExerciseType.Strength) {
-                    
                     exercise.setValue(elem.exerciseName, forKey: "exerciseName")
                     exercise.setValue((elem as! StrengthExercise).sets, forKey: "sets")
                     exercise.setValue((elem as! StrengthExercise).reps, forKey: "reps")
                 }
                 // Cardio
                 else {
-                
                     exercise.setValue(elem.exerciseName, forKey: "exerciseName")
                     exercise.setValue((elem as! CardioExercise).speed, forKey: "speed")
                     exercise.setValue((elem as! CardioExercise).resistance, forKey: "resistance")

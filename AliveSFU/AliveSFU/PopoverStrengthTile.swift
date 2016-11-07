@@ -58,9 +58,7 @@ class PopoverStrengthTile: UIViewController {
 
     
     @IBAction func deleteButton(_ sender: UIButton) {
-        
-        let name1: String = exerciseName.text!
-        let _res = DataHandler.deleteElementFromExerciseArray(name: name1)
+        let _res = DataHandler.deleteElementFromExerciseArray(id: uuid)
         removeAnimate()
     }
    
