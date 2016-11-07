@@ -18,7 +18,7 @@ class AddStrengthExercise: UIViewController {
     @IBOutlet weak var setsInput: UITextField!
     @IBOutlet weak var repsInput: UITextField!
     //Vivek:
-    var exerciseDayStrength: Int = 1    //variable that will store the result from what is chosen on the segmented display
+    var exerciseDayStrength: Int = 0   //variable that will store the result from what is chosen on the segmented display
     //Vivek: Whenever the segmented display is touched, the int corresponding to the day will
     //be stored in the variable "exerciseDay"
 
@@ -43,7 +43,8 @@ class AddStrengthExercise: UIViewController {
         // Check for valid values like max number of characters that can be entered etc.
         // Create a new object
         if (exerciseNameInput.text != "" && setsInput.text != "" && repsInput.text != "") {
-            let newExercise = ExerciseFactory.returnExerciseByCategory(type: ExerciseType.Strength, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayStrength)!, completed: false)
+            //remember to increment exerciseDayCardio by 1 because the NSDate indexing for weekdays start at 1
+            let newExercise = ExerciseFactory.returnExerciseByCategory(type: ExerciseType.Strength, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayStrength+1)!, completed: false)
 
             (newExercise as! StrengthExercise).sets = setsInput.text!
             (newExercise as! StrengthExercise).reps = repsInput.text!

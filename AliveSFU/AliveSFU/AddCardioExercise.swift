@@ -18,7 +18,7 @@ class AddCardioExercise: UIViewController {
     @IBOutlet weak var timeInput: UITextField!
     @IBOutlet weak var resistanceInput: UITextField!
     //Vivek:
-    var exerciseDayCardio: Int = 1
+    var exerciseDayCardio: Int = 0
     //Vivek:
     
 
@@ -41,7 +41,8 @@ class AddCardioExercise: UIViewController {
     @IBAction func saveButton(_ sender: UIButton) {
         if ((exerciseNameInput.text != "") && (timeInput.text != "") && (speedInput.text != "") && (resistanceInput.text != "") )
         {
-            let newExercise = ExerciseFactory.returnExerciseByCategory(type: .Cardio, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayCardio)!, completed: false)
+            //remember to increment exerciseDayCardio by 1 because the NSDate indexing for weekdays start at 1
+            let newExercise = ExerciseFactory.returnExerciseByCategory(type: .Cardio, exerciseName: exerciseNameInput.text!, day: DaysInAWeek(rawValue : exerciseDayCardio+1)!, completed: false)
             (newExercise as! CardioExercise).speed = speedInput.text!
             (newExercise as! CardioExercise).resistance = resistanceInput.text!
             (newExercise as! CardioExercise).time = timeInput.text!

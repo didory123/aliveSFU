@@ -63,7 +63,7 @@ public enum ExerciseType : String {
 }
 
 //Using a protocol type for exercise
-//There is a possibility that exercise types will get expanded in the future, leave this open to extension
+//There is a possibility that exercise types will get expanded in the future, using inheritance will open the class up for possible extension
 protocol Exercise {
     var exerciseName: String { get set }
     var day: DaysInAWeek { get set }
