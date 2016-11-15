@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Count" syncable="YES">
-        <attribute name="exerciseArray" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    <entity name="EnabledFlags" representedClassName="EnabledFlags" syncable="YES" codeGenerationType="class">
+        <attribute name="buddyEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sleepEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="Exercise" representedClassName="ExerciseMO" syncable="YES">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,8 +16,21 @@
         <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="UserDetails" representedClassName="UserDetails" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fitnessGoal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fitnessLevel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Count" positionX="-54" positionY="18" width="128" height="60"/>
         <element name="Exercise" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="UserDetails" positionX="-63" positionY="54" width="128" height="195"/>
+        <element name="EnabledFlags" positionX="-54" positionY="99" width="128" height="75"/>
     </elements>
 </model>
