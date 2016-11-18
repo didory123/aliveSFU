@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ASX-Vp-UJ2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Subpage1 View Controller-->
+        <scene sceneID="cRz-yb-XmS">
+            <objects>
+                <viewController storyboardIdentifier="1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ASX-Vp-UJ2" customClass="Subpage1ViewController" customModule="AliveSFU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lt1-KZ-yMd"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbv-Bn-Lz7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yJP-zG-bh8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EAM-yz-17v">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnT-6B-EHm">
+                                        <rect key="frame" x="0.5" y="40" width="375" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
+                                        <color key="textColor" red="0.65098039215686276" green="0.098039215686274508" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" tag="1000" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xlv-7J-Ydg" userLabel="Container">
+                                        <rect key="frame" x="20" y="179.5" width="335" height="268"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="elD-2s-GRD">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="29"/>
+                                                <segments>
+                                                    <segment title="Male"/>
+                                                    <segment title="Female"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            </segmentedControl>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JeD-Lw-LTk" userLabel="userFirstName">
+                                                <rect key="frame" x="0.0" y="48" width="335" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="9BZ-TJ-7sM"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="PTS-jg-QWp"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBV-Za-niM" userLabel="userLastName">
+                                                <rect key="frame" x="0.0" y="108" width="335" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="oiL-kG-fAI"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GGq-ef-00i" userLabel="userPhoneNumber">
+                                                <rect key="frame" x="0.0" y="168" width="335" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="NzU-S8-7Dz"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFp-XI-RQ5" userLabel="userEmail">
+                                                <rect key="frame" x="0.0" y="228" width="335" height="40"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="TAa-9r-T9p"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JeD-Lw-LTk" firstAttribute="height" secondItem="bBV-Za-niM" secondAttribute="height" id="MXL-YH-0XC"/>
+                                            <constraint firstItem="JeD-Lw-LTk" firstAttribute="height" secondItem="GGq-ef-00i" secondAttribute="height" id="dgb-4L-OEh"/>
+                                            <constraint firstItem="JeD-Lw-LTk" firstAttribute="height" secondItem="hFp-XI-RQ5" secondAttribute="height" id="eHc-TJ-1p8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-uu-crZ" userLabel="Next">
+                                        <rect key="frame" x="142.5" y="557.5" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jNU-uu-crZ" secondAttribute="height" multiplier="1:1" id="cII-Z2-D8Q"/>
+                                            <constraint firstAttribute="width" constant="90" id="ixG-BL-8nr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <state key="normal" title="Next" backgroundImage="circularButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextBtnAction:" destination="ASX-Vp-UJ2" eventType="touchUpInside" id="RV3-m3-AX6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jNU-uu-crZ" firstAttribute="centerX" secondItem="EAM-yz-17v" secondAttribute="centerX" id="CUc-69-8Cj"/>
+                                    <constraint firstItem="Xlv-7J-Ydg" firstAttribute="centerX" secondItem="EAM-yz-17v" secondAttribute="centerX" id="Cbr-0O-b6g"/>
+                                    <constraint firstItem="rnT-6B-EHm" firstAttribute="top" secondItem="EAM-yz-17v" secondAttribute="top" constant="40" id="XRY-KL-Q2g"/>
+                                    <constraint firstItem="rnT-6B-EHm" firstAttribute="centerX" secondItem="EAM-yz-17v" secondAttribute="centerX" id="Y93-Xs-d3G"/>
+                                    <constraint firstItem="Xlv-7J-Ydg" firstAttribute="width" secondItem="EAM-yz-17v" secondAttribute="width" constant="-40" id="gdZ-Ib-4vf"/>
+                                    <constraint firstItem="Xlv-7J-Ydg" firstAttribute="centerY" secondItem="EAM-yz-17v" secondAttribute="centerY" constant="-20" id="m1J-UD-P2k"/>
+                                    <constraint firstItem="rnT-6B-EHm" firstAttribute="width" secondItem="EAM-yz-17v" secondAttribute="width" id="rcW-rQ-DHp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EAM-yz-17v" firstAttribute="width" secondItem="yJP-zG-bh8" secondAttribute="width" id="A6Y-uJ-iXK"/>
+                            <constraint firstItem="nbv-Bn-Lz7" firstAttribute="top" secondItem="jNU-uu-crZ" secondAttribute="bottom" constant="20" id="EDc-ym-Eqk"/>
+                            <constraint firstItem="EAM-yz-17v" firstAttribute="centerY" secondItem="yJP-zG-bh8" secondAttribute="centerY" id="IIp-Lj-cwu"/>
+                            <constraint firstItem="EAM-yz-17v" firstAttribute="height" secondItem="yJP-zG-bh8" secondAttribute="height" id="U79-j7-7Qg"/>
+                            <constraint firstItem="EAM-yz-17v" firstAttribute="centerX" secondItem="yJP-zG-bh8" secondAttribute="centerX" id="iO4-C3-Bez"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userEmail" destination="hFp-XI-RQ5" id="fof-RD-Btn"/>
+                        <outlet property="userFirstName" destination="JeD-Lw-LTk" id="xtM-MS-PrP"/>
+                        <outlet property="userGender" destination="elD-2s-GRD" id="nif-P9-8NR"/>
+                        <outlet property="userLastName" destination="bBV-Za-niM" id="H9w-cD-nXP"/>
+                        <outlet property="userPhoneNumber" destination="GGq-ef-00i" id="XjO-92-IFd"/>
+                        <segue destination="691-Mg-cd9" kind="show" identifier="showSubpage2" id="qNJ-np-Glt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgp-XU-rFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450.39999999999998" y="842.42878560719646"/>
+        </scene>
+        <!--Subpage2 View Controller-->
+        <scene sceneID="cQZ-7F-41q">
+            <objects>
+                <viewController storyboardIdentifier="2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="691-Mg-cd9" customClass="Subpage2ViewController" customModule="AliveSFU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ho8-wG-cQ0"/>
+                        <viewControllerLayoutGuide type="bottom" id="zTA-3v-MM7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cid-BW-YIn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoJ-Ps-GMg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8J-K7-YLj">
+                                        <rect key="frame" x="20" y="40" width="335" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
+                                        <color key="textColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" tag="1000" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jfH-b3-0Op" userLabel="Container">
+                                        <rect key="frame" x="20" y="118.5" width="335" height="390.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8o-je-Qc2" userLabel="Height">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCl-Ko-twy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mag-b7-KcA" userLabel="Value">
+                                                        <rect key="frame" x="117.5" y="0.0" width="217.5" height="40"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRQ-Rq-DR9" userLabel="userHeightFt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="C5D-8E-9gq"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="OZ4-q4-B5N"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="updateHeight:" destination="691-Mg-cd9" eventType="editingDidEnd" id="IVC-UP-V5I"/>
+                                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="b8e-l4-VGQ"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swz-c6-DPV">
+                                                                <rect key="frame" x="60" y="0.0" width="60" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ZX-b2-41h" userLabel="userHeightInch">
+                                                                <rect key="frame" x="120" y="0.0" width="60" height="40"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="updateHeight:" destination="691-Mg-cd9" eventType="editingDidEnd" id="apT-Bt-baZ"/>
+                                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="qsT-jb-fnh"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odc-ka-h0r">
+                                                                <rect key="frame" x="180" y="0.0" width="37.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="IRQ-Rq-DR9" firstAttribute="width" secondItem="0ZX-b2-41h" secondAttribute="width" id="6ac-bj-TRf"/>
+                                                            <constraint firstItem="IRQ-Rq-DR9" firstAttribute="width" secondItem="Swz-c6-DPV" secondAttribute="width" id="Uyc-Xn-TJ4"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="dCl-Ko-twy" firstAttribute="width" secondItem="Mag-b7-KcA" secondAttribute="width" constant="-100" id="EDu-i3-oCE"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VV7-Uc-aVc" userLabel="Weight">
+                                                <rect key="frame" x="0.0" y="60" width="335" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib3-Wd-sdm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rwO-fg-R5A" userLabel="Value">
+                                                        <rect key="frame" x="117.5" y="0.0" width="217.5" height="40"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqf-2s-xeX" userLabel="userHeightFt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="eOh-i9-cjZ"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="qGL-pB-sLC"/>
+                                                                </constraints>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="updateWeight:" destination="691-Mg-cd9" eventType="editingDidEnd" id="Pim-9w-SJq"/>
+                                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="cTT-nT-tPN"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asA-pO-RpT">
+                                                                <rect key="frame" x="60" y="0.0" width="60" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="00" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RX4-uG-IcA" userLabel="userHeightInch">
+                                                                <rect key="frame" x="120" y="0.0" width="60" height="40"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="updateWeight:" destination="691-Mg-cd9" eventType="editingDidEnd" id="SvG-4e-2wT"/>
+                                                                    <outlet property="delegate" destination="ASX-Vp-UJ2" id="akb-BA-LMd"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTA-tb-DFP">
+                                                                <rect key="frame" x="180" y="0.0" width="37.5" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="uqf-2s-xeX" firstAttribute="width" secondItem="RX4-uG-IcA" secondAttribute="width" id="BhJ-Yf-nKd"/>
+                                                            <constraint firstItem="uqf-2s-xeX" firstAttribute="width" secondItem="asA-pO-RpT" secondAttribute="width" id="TTZ-BO-FV2"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ib3-Wd-sdm" firstAttribute="width" secondItem="rwO-fg-R5A" secondAttribute="width" constant="-100" id="BLD-6p-g0L"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age Group:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og5-rs-IH0">
+                                                <rect key="frame" x="0.0" y="120" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-m2-DK2" userLabel="Checkboxes">
+                                                <rect key="frame" x="0.0" y="160.5" width="335" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg8-KB-KQd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="17-20">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectAgeGroup:" destination="691-Mg-cd9" eventType="touchUpInside" id="bh7-ZS-yOQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYT-E6-01W">
+                                                        <rect key="frame" x="67" y="0.0" width="67" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="20-22">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectAgeGroup:" destination="691-Mg-cd9" eventType="touchUpInside" id="eyW-gG-oxO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEk-YK-Zy1">
+                                                        <rect key="frame" x="134" y="0.0" width="67.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="22-25">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectAgeGroup:" destination="691-Mg-cd9" eventType="touchUpInside" id="7nK-ed-4lx"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F5-5P-ucX">
+                                                        <rect key="frame" x="201.5" y="0.0" width="67" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="25-30">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectAgeGroup:" destination="691-Mg-cd9" eventType="touchUpInside" id="3Gj-Ax-bhL"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAU-D1-Jbc">
+                                                        <rect key="frame" x="268.5" y="0.0" width="66.5" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="30+">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectAgeGroup:" destination="691-Mg-cd9" eventType="touchUpInside" id="DJG-rm-0i1"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="TEk-YK-Zy1" firstAttribute="width" secondItem="9F5-5P-ucX" secondAttribute="width" id="K4D-jC-XW1"/>
+                                                    <constraint firstItem="9F5-5P-ucX" firstAttribute="width" secondItem="rAU-D1-Jbc" secondAttribute="width" id="ZYT-g7-f93"/>
+                                                    <constraint firstItem="kYT-E6-01W" firstAttribute="width" secondItem="TEk-YK-Zy1" secondAttribute="width" id="iOY-dJ-dMZ"/>
+                                                    <constraint firstItem="bg8-KB-KQd" firstAttribute="width" secondItem="kYT-E6-01W" secondAttribute="width" id="tHG-kS-QlS"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness Frequency (hours / week):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egO-G1-fdG">
+                                                <rect key="frame" x="0.0" y="220.5" width="335" height="20"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HmY-Ic-j6B" userLabel="Checkboxes">
+                                                <rect key="frame" x="0.0" y="260.5" width="335" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3l-ca-Dbp">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="0-5 ">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFitnessFrequency:" destination="691-Mg-cd9" eventType="touchUpInside" id="zo8-5H-PGj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuY-Z6-loE">
+                                                        <rect key="frame" x="67" y="0.0" width="67" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="5-10">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFitnessFrequency:" destination="691-Mg-cd9" eventType="touchUpInside" id="wRz-40-i59"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icy-hA-Z9M">
+                                                        <rect key="frame" x="134" y="0.0" width="67.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="10-15">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFitnessFrequency:" destination="691-Mg-cd9" eventType="touchUpInside" id="jfs-ba-Jkf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3w-ak-zph">
+                                                        <rect key="frame" x="201.5" y="0.0" width="67" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="15-20">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFitnessFrequency:" destination="691-Mg-cd9" eventType="touchUpInside" id="Vqb-uF-z6a"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2I-zu-6MQ">
+                                                        <rect key="frame" x="268.5" y="0.0" width="66.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="20+">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.71168619394302368" green="0.0" blue="0.15891879796981812" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectFitnessFrequency:" destination="691-Mg-cd9" eventType="touchUpInside" id="JzB-Qv-Wye"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="icy-hA-Z9M" firstAttribute="width" secondItem="c3w-ak-zph" secondAttribute="width" id="8MV-YE-ENP"/>
+                                                    <constraint firstItem="c3w-ak-zph" firstAttribute="width" secondItem="b2I-zu-6MQ" secondAttribute="width" id="9OI-Zl-TY2"/>
+                                                    <constraint firstItem="J3l-ca-Dbp" firstAttribute="width" secondItem="tuY-Z6-loE" secondAttribute="width" id="OFL-yP-iQS"/>
+                                                    <constraint firstItem="tuY-Z6-loE" firstAttribute="width" secondItem="icy-hA-Z9M" secondAttribute="width" id="aFm-FQ-ILz"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Goals:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDC-cU-rdM">
+                                                <rect key="frame" x="0.0" y="310.5" width="335" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7J-Hk-8Fk" userLabel="Checkboxes">
+                                                <rect key="frame" x="0.0" y="360.5" width="335" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybp-09-mLS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Weight Loss">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectPersonalGoals:" destination="691-Mg-cd9" eventType="touchUpInside" id="YcQ-L4-K1F"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pN3-zp-YGs">
+                                                        <rect key="frame" x="111.5" y="0.0" width="112" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Strength">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectPersonalGoals:" destination="691-Mg-cd9" eventType="touchUpInside" id="ftS-U5-Hve"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6z-Nb-ekP">
+                                                        <rect key="frame" x="223.5" y="0.0" width="111.5" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal" title="Maintenance">
+                                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <state key="selected">
+                                                            <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="selectPersonalGoals:" destination="691-Mg-cd9" eventType="touchUpInside" id="eee-s6-AmD"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ybp-09-mLS" firstAttribute="width" secondItem="pN3-zp-YGs" secondAttribute="width" id="JlB-vj-69G"/>
+                                                    <constraint firstItem="pN3-zp-YGs" firstAttribute="width" secondItem="a6z-Nb-ekP" secondAttribute="width" id="tb7-DP-8hN"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ncj-m2-DK2" firstAttribute="height" secondItem="VV7-Uc-aVc" secondAttribute="height" id="3Cz-Vs-lsI"/>
+                                            <constraint firstItem="z7J-Hk-8Fk" firstAttribute="height" secondItem="LDC-cU-rdM" secondAttribute="height" id="s8H-w1-iYw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gm-kr-PKe" userLabel="Next">
+                                        <rect key="frame" x="142.5" y="557" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="4gm-kr-PKe" secondAttribute="height" multiplier="1:1" id="U5d-qo-roI"/>
+                                            <constraint firstAttribute="width" constant="90" id="XDU-HU-3V3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <state key="normal" title="Next" backgroundImage="circularButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextBtnAction:" destination="691-Mg-cd9" eventType="touchUpInside" id="vob-Lw-hRs"/>
+                                            <action selector="nextButton:" destination="ASX-Vp-UJ2" eventType="touchUpInside" id="fDR-NH-DYz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jfH-b3-0Op" firstAttribute="centerY" secondItem="yoJ-Ps-GMg" secondAttribute="centerY" constant="-20" id="JDm-0O-KlE"/>
+                                    <constraint firstItem="jfH-b3-0Op" firstAttribute="centerX" secondItem="yoJ-Ps-GMg" secondAttribute="centerX" id="Ptt-ab-cae"/>
+                                    <constraint firstItem="4gm-kr-PKe" firstAttribute="centerX" secondItem="yoJ-Ps-GMg" secondAttribute="centerX" id="YEw-ES-Kfc"/>
+                                    <constraint firstItem="E8J-K7-YLj" firstAttribute="top" secondItem="yoJ-Ps-GMg" secondAttribute="top" constant="40" id="a3Z-Zl-Z0X"/>
+                                    <constraint firstItem="E8J-K7-YLj" firstAttribute="width" secondItem="jfH-b3-0Op" secondAttribute="width" id="ctS-8x-brD"/>
+                                    <constraint firstItem="jfH-b3-0Op" firstAttribute="width" secondItem="yoJ-Ps-GMg" secondAttribute="width" constant="-40" id="ltt-MJ-cgE"/>
+                                    <constraint firstAttribute="bottom" secondItem="4gm-kr-PKe" secondAttribute="bottom" constant="20" id="vGf-xn-bau"/>
+                                    <constraint firstItem="E8J-K7-YLj" firstAttribute="centerX" secondItem="yoJ-Ps-GMg" secondAttribute="centerX" id="xup-D4-eh8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yoJ-Ps-GMg" firstAttribute="width" secondItem="cid-BW-YIn" secondAttribute="width" id="FSG-VW-XjP"/>
+                            <constraint firstItem="yoJ-Ps-GMg" firstAttribute="centerY" secondItem="cid-BW-YIn" secondAttribute="centerY" id="O3P-nv-J1V"/>
+                            <constraint firstItem="yoJ-Ps-GMg" firstAttribute="centerX" secondItem="cid-BW-YIn" secondAttribute="centerX" id="T2D-Ee-Hbh"/>
+                            <constraint firstItem="yoJ-Ps-GMg" firstAttribute="height" secondItem="cid-BW-YIn" secondAttribute="height" id="aG1-UU-Kbx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="personalGoals" destination="ybp-09-mLS" collectionClass="NSMutableArray" id="YCM-YF-sGn"/>
+                        <outletCollection property="personalGoals" destination="pN3-zp-YGs" collectionClass="NSMutableArray" id="hK1-Id-H9M"/>
+                        <outletCollection property="personalGoals" destination="a6z-Nb-ekP" collectionClass="NSMutableArray" id="rkn-3l-6Hb"/>
+                        <outletCollection property="fitnessFrequency" destination="icy-hA-Z9M" collectionClass="NSMutableArray" id="Flz-6M-bZF"/>
+                        <outletCollection property="fitnessFrequency" destination="J3l-ca-Dbp" collectionClass="NSMutableArray" id="Rqk-Xm-LRj"/>
+                        <outletCollection property="fitnessFrequency" destination="tuY-Z6-loE" collectionClass="NSMutableArray" id="DgO-DI-9sn"/>
+                        <outletCollection property="fitnessFrequency" destination="icy-hA-Z9M" collectionClass="NSMutableArray" id="XcL-SJ-t2k"/>
+                        <outletCollection property="fitnessFrequency" destination="c3w-ak-zph" collectionClass="NSMutableArray" id="L8i-Tu-n7F"/>
+                        <outletCollection property="fitnessFrequency" destination="b2I-zu-6MQ" collectionClass="NSMutableArray" id="Ps0-l8-2tl"/>
+                        <outletCollection property="height" destination="IRQ-Rq-DR9" collectionClass="NSMutableArray" id="pQh-wL-xsS"/>
+                        <outletCollection property="height" destination="0ZX-b2-41h" collectionClass="NSMutableArray" id="mua-Vl-012"/>
+                        <outletCollection property="weight" destination="uqf-2s-xeX" collectionClass="NSMutableArray" id="I3T-0M-3Tz"/>
+                        <outletCollection property="weight" destination="RX4-uG-IcA" collectionClass="NSMutableArray" id="lng-J1-Ag6"/>
+                        <outletCollection property="ageGroup" destination="bg8-KB-KQd" collectionClass="NSMutableArray" id="ICQ-be-nAx"/>
+                        <outletCollection property="ageGroup" destination="kYT-E6-01W" collectionClass="NSMutableArray" id="Eok-eN-wET"/>
+                        <outletCollection property="ageGroup" destination="TEk-YK-Zy1" collectionClass="NSMutableArray" id="az3-I0-i9x"/>
+                        <outletCollection property="ageGroup" destination="9F5-5P-ucX" collectionClass="NSMutableArray" id="DbK-cN-heq"/>
+                        <outletCollection property="ageGroup" destination="rAU-D1-Jbc" collectionClass="NSMutableArray" id="VH8-5B-sec"/>
+                        <segue destination="iDu-kS-Zdp" kind="show" identifier="showSubpage3" id="Qp8-aA-XIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="azF-lG-0C8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-450.39999999999998" y="1537.7811094452775"/>
+        </scene>
+        <!--Subpage3 View Controller-->
+        <scene sceneID="pIb-uI-dYs">
+            <objects>
+                <viewController storyboardIdentifier="3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iDu-kS-Zdp" customClass="Subpage3ViewController" customModule="AliveSFU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TbL-Ck-dl3"/>
+                        <viewControllerLayoutGuide type="bottom" id="sZR-WG-7QR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lQg-4H-iVL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNy-WD-QG3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep Analysis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Z2-t1-Udm">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
+                                        <color key="textColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP8-fM-BaQ">
+                                        <rect key="frame" x="19.5" y="120.5" width="335" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="Go9-n2-NX2"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Sleep Analysis?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bM6-46-vjC">
+                                        <rect key="frame" x="19.5" y="320.5" width="335" height="34.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofd-jP-ABa" userLabel="Buttons">
+                                        <rect key="frame" x="40" y="415" width="295" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZc-wt-rFN">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Disable">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleEnableDisableSleep:" destination="iDu-kS-Zdp" eventType="touchUpInside" id="UYA-u5-Chw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZc-6J-9zP">
+                                                <rect key="frame" x="147.5" y="0.0" width="147.5" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="04S-k9-Zgs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Enable">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleEnableDisableSleep:" destination="iDu-kS-Zdp" eventType="touchUpInside" id="OBu-6u-lov"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="uZc-wt-rFN" firstAttribute="width" secondItem="SZc-6J-9zP" secondAttribute="width" id="ebY-jw-nBb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0l-y4-n5f" userLabel="Next">
+                                        <rect key="frame" x="142.5" y="557" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="ARy-2H-jck"/>
+                                            <constraint firstAttribute="width" secondItem="e0l-y4-n5f" secondAttribute="height" multiplier="1:1" id="Qxd-pb-FfL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <state key="normal" title="Next" backgroundImage="circularButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextBtnAction:" destination="iDu-kS-Zdp" eventType="touchUpInside" id="vgs-fQ-Ksx"/>
+                                            <action selector="nextButton:" destination="ASX-Vp-UJ2" eventType="touchUpInside" id="ZAS-nq-ja2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2Z2-t1-Udm" firstAttribute="centerX" secondItem="DNy-WD-QG3" secondAttribute="centerX" id="GAr-Bu-C2N"/>
+                                    <constraint firstItem="tP8-fM-BaQ" firstAttribute="width" secondItem="DNy-WD-QG3" secondAttribute="width" constant="-40" id="KGE-Vv-CZa"/>
+                                    <constraint firstItem="2Z2-t1-Udm" firstAttribute="top" secondItem="DNy-WD-QG3" secondAttribute="top" constant="40" id="KM3-O2-dpf"/>
+                                    <constraint firstItem="tP8-fM-BaQ" firstAttribute="centerX" secondItem="DNy-WD-QG3" secondAttribute="centerX" id="U5W-aF-OI8"/>
+                                    <constraint firstItem="ofd-jP-ABa" firstAttribute="width" secondItem="DNy-WD-QG3" secondAttribute="width" constant="-80" id="XZN-ic-hny"/>
+                                    <constraint firstItem="bM6-46-vjC" firstAttribute="centerX" secondItem="tP8-fM-BaQ" secondAttribute="centerX" id="bh9-v4-1FU"/>
+                                    <constraint firstItem="bM6-46-vjC" firstAttribute="top" secondItem="tP8-fM-BaQ" secondAttribute="bottom" constant="40" id="dld-yq-gxM"/>
+                                    <constraint firstItem="tP8-fM-BaQ" firstAttribute="top" secondItem="2Z2-t1-Udm" secondAttribute="bottom" constant="40" id="eYN-ye-ZgS"/>
+                                    <constraint firstItem="e0l-y4-n5f" firstAttribute="centerX" secondItem="DNy-WD-QG3" secondAttribute="centerX" id="f0d-o1-8Op"/>
+                                    <constraint firstItem="bM6-46-vjC" firstAttribute="width" secondItem="tP8-fM-BaQ" secondAttribute="width" id="fYZ-gd-sjl"/>
+                                    <constraint firstAttribute="bottom" secondItem="e0l-y4-n5f" secondAttribute="bottom" constant="20" id="lLE-Oy-Mgz"/>
+                                    <constraint firstItem="ofd-jP-ABa" firstAttribute="centerX" secondItem="DNy-WD-QG3" secondAttribute="centerX" id="nBa-lb-Y5r"/>
+                                    <constraint firstItem="2Z2-t1-Udm" firstAttribute="width" secondItem="DNy-WD-QG3" secondAttribute="width" id="pCK-ew-Uo3"/>
+                                    <constraint firstItem="ofd-jP-ABa" firstAttribute="top" secondItem="bM6-46-vjC" secondAttribute="bottom" constant="60" id="uDI-uF-qhK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DNy-WD-QG3" firstAttribute="width" secondItem="lQg-4H-iVL" secondAttribute="width" id="08k-3p-rSK"/>
+                            <constraint firstItem="DNy-WD-QG3" firstAttribute="centerX" secondItem="lQg-4H-iVL" secondAttribute="centerX" id="RNE-xB-XP7"/>
+                            <constraint firstItem="DNy-WD-QG3" firstAttribute="centerY" secondItem="lQg-4H-iVL" secondAttribute="centerY" id="VcD-Mi-P4G"/>
+                            <constraint firstItem="DNy-WD-QG3" firstAttribute="height" secondItem="lQg-4H-iVL" secondAttribute="height" id="rbS-Gk-CqR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="enableDisableSleepAnalysis" destination="uZc-wt-rFN" collectionClass="NSMutableArray" id="ifa-Qz-Qf9"/>
+                        <outletCollection property="enableDisableSleepAnalysis" destination="SZc-6J-9zP" collectionClass="NSMutableArray" id="WzB-gk-MhJ"/>
+                        <segue destination="37G-Ym-g7N" kind="show" identifier="showSubpage4" id="63p-gd-zv4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CsV-2g-Bn0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="841.52923538230891"/>
+        </scene>
+        <!--Subpage4 View Controller-->
+        <scene sceneID="WwS-ki-jHV">
+            <objects>
+                <viewController storyboardIdentifier="4" useStoryboardIdentifierAsRestorationIdentifier="YES" id="37G-Ym-g7N" customClass="Subpage4ViewController" customModule="AliveSFU" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9wx-1v-F1n"/>
+                        <viewControllerLayoutGuide type="bottom" id="QuM-uX-K9j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jtt-bc-qL1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRq-0l-mVK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fitness Buddy Finder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3f-xb-qjA">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="40.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
+                                        <color key="textColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jq-ak-jiD">
+                                        <rect key="frame" x="19.5" y="120" width="335" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="jlr-Kr-TET"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Fitness Buddy Finder?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-i2-vzi">
+                                        <rect key="frame" x="20" y="320" width="335" height="69"/>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obS-eX-oRP" userLabel="Buttons">
+                                        <rect key="frame" x="40" y="448.5" width="295" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOy-bU-7Xt">
+                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="40"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Disable">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleEnableDisable:" destination="37G-Ym-g7N" eventType="touchUpInside" id="PpI-Gz-nmk"/>
+                                                    <action selector="toggleEnableDisableSleep:" destination="iDu-kS-Zdp" eventType="touchUpInside" id="Y7B-F7-RJb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLT-eb-x01">
+                                                <rect key="frame" x="147.5" y="0.0" width="147.5" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="VNM-K4-XlV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <state key="normal" title="Enable">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toggleEnableDisable:" destination="37G-Ym-g7N" eventType="touchUpInside" id="S5k-ch-Cmm"/>
+                                                    <action selector="toggleEnableDisableSleep:" destination="iDu-kS-Zdp" eventType="touchUpInside" id="JXC-yK-Bwp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JOy-bU-7Xt" firstAttribute="width" secondItem="vLT-eb-x01" secondAttribute="width" id="4Dy-nj-iLT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dii-SX-Rta" userLabel="Next">
+                                        <rect key="frame" x="142.5" y="557" width="90" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Dii-SX-Rta" secondAttribute="height" multiplier="1:1" id="Yjg-WC-iTM"/>
+                                            <constraint firstAttribute="width" constant="90" id="uRh-8z-N2Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                        <state key="normal" title="Finish" backgroundImage="circularButton">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="finishBtnAction:" destination="37G-Ym-g7N" eventType="touchUpInside" id="r24-I1-W4B"/>
+                                            <action selector="nextButton:" destination="ASX-Vp-UJ2" eventType="touchUpInside" id="AKo-Im-T41"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kac-i2-vzi" firstAttribute="centerX" secondItem="3jq-ak-jiD" secondAttribute="centerX" id="0CA-Vc-GS3"/>
+                                    <constraint firstItem="Y3f-xb-qjA" firstAttribute="width" secondItem="ZRq-0l-mVK" secondAttribute="width" id="7BJ-d6-GZJ"/>
+                                    <constraint firstItem="obS-eX-oRP" firstAttribute="top" secondItem="Kac-i2-vzi" secondAttribute="bottom" constant="60" id="8hQ-RN-nQY"/>
+                                    <constraint firstItem="Y3f-xb-qjA" firstAttribute="top" secondItem="ZRq-0l-mVK" secondAttribute="top" constant="40" id="LBg-BV-4kA"/>
+                                    <constraint firstItem="obS-eX-oRP" firstAttribute="width" secondItem="ZRq-0l-mVK" secondAttribute="width" constant="-80" id="TD0-7E-4sH"/>
+                                    <constraint firstItem="obS-eX-oRP" firstAttribute="centerX" secondItem="ZRq-0l-mVK" secondAttribute="centerX" id="ZmZ-c6-MpN"/>
+                                    <constraint firstItem="3jq-ak-jiD" firstAttribute="centerX" secondItem="ZRq-0l-mVK" secondAttribute="centerX" id="bfw-hT-KtD"/>
+                                    <constraint firstItem="Dii-SX-Rta" firstAttribute="centerX" secondItem="ZRq-0l-mVK" secondAttribute="centerX" id="gSP-mU-fME"/>
+                                    <constraint firstItem="Kac-i2-vzi" firstAttribute="width" secondItem="3jq-ak-jiD" secondAttribute="width" id="hCp-bO-XeJ"/>
+                                    <constraint firstItem="3jq-ak-jiD" firstAttribute="top" secondItem="Y3f-xb-qjA" secondAttribute="bottom" constant="40" id="kRB-4N-xGB"/>
+                                    <constraint firstItem="3jq-ak-jiD" firstAttribute="width" secondItem="ZRq-0l-mVK" secondAttribute="width" constant="-40" id="qqO-Ax-T7M"/>
+                                    <constraint firstItem="Y3f-xb-qjA" firstAttribute="centerX" secondItem="ZRq-0l-mVK" secondAttribute="centerX" id="tCp-Yy-ZKo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dii-SX-Rta" secondAttribute="bottom" constant="20" id="u8a-Ho-8to"/>
+                                    <constraint firstItem="Kac-i2-vzi" firstAttribute="top" secondItem="3jq-ak-jiD" secondAttribute="bottom" constant="40" id="x31-Yd-5P6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZRq-0l-mVK" firstAttribute="centerY" secondItem="Jtt-bc-qL1" secondAttribute="centerY" id="H1Z-3k-P9D"/>
+                            <constraint firstItem="ZRq-0l-mVK" firstAttribute="width" secondItem="Jtt-bc-qL1" secondAttribute="width" id="Had-bQ-b8c"/>
+                            <constraint firstItem="ZRq-0l-mVK" firstAttribute="height" secondItem="Jtt-bc-qL1" secondAttribute="height" id="iz1-gF-rpQ"/>
+                            <constraint firstItem="ZRq-0l-mVK" firstAttribute="centerX" secondItem="Jtt-bc-qL1" secondAttribute="centerX" id="nmr-C1-Xrm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="enableDisableButton" destination="JOy-bU-7Xt" collectionClass="NSMutableArray" id="iAt-6J-DjY"/>
+                        <outletCollection property="enableDisableButton" destination="vLT-eb-x01" collectionClass="NSMutableArray" id="phq-ZE-2eu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPV-Ea-Z6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="604" y="1553.9730134932536"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circularButton" width="150" height="150"/>
+    </resources>
+</document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class HomePageController: UIViewController {
 
@@ -14,10 +15,32 @@ class HomePageController: UIViewController {
     @IBOutlet weak var calorieBurned: UILabel!
     @IBOutlet weak var todaySleep: UILabel!
     
+   // let activityManager = CMMotionActivityManager()
+    let pedoMeter = CMPedometer()
+    let calendar = NSCalendar.current
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
+        
+        let calendar = NSCalendar.current
+        var comps = calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: Date())
+        comps.hour = 0
+        comps.minute = 0
+        comps.second = 0
+        
+        let midnight = calendar.date(from: comps)!
+        
+        if(CMPedometer.isStepCountingAvailable()){
+            
+            self.pedoMeter.startUpdates(from: midnight) { (data: CMPedometerData?, error) -> Void in
+                DispatchQueue.main.async(execute: { () -> Void in
+                    if(error == nil){
+                        print("\(data!.numberOfSteps)")
+                        self.stepCount.text = "\(data!.numberOfSteps)"
+                    }
+                })
+            }
+        }//endif
     }
     
     override func viewWillAppear(_ animated: Bool) {

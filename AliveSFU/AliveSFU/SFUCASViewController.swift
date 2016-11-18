@@ -29,7 +29,7 @@ class SFUCASViewController: UIViewController {
         
         let url = URL(string: "https://cas.sfu.ca/cas/login?service=http://my/url")
         let req = URLRequest(url: url!)
-        webContainer.loadRequest(req)
+        
     }
     
 }

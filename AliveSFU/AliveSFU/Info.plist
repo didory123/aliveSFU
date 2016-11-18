@@ -43,6 +43,8 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>NSMotionUsageDescription</key>
+	<string>aliveSFU uses iPhone&apos;s pedometer to track your Step Count</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

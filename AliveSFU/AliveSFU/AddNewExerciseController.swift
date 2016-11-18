@@ -9,10 +9,15 @@
 import UIKit
 
 class AddNewExerciseController: UIViewController {
+    @IBOutlet weak var category: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let borderColor = UIColor.init(red: 238, green: 238, blue: 238).cgColor
+        category.layer.borderColor = borderColor
+        
     }
 
     override func didReceiveMemoryWarning() {
