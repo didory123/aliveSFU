@@ -64,6 +64,7 @@ class Subpage1ViewController: SubpageViewController {
     @IBOutlet weak var userGender: UISegmentedControl!
     @IBOutlet weak var userPhoneNumber: UITextField!
     @IBOutlet weak var userEmail: UITextField!
+    @IBOutlet weak var emptyAlertLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,7 @@ class Subpage1ViewController: SubpageViewController {
     }
     
     override func validateFields() -> Bool {
+        //smyTextField.layer.borderColor = UIColor( red: CGFloat, green: CGFloat, blue:CGFLoat, alpha: CGFloat ).CGColor
         // Check if the fields are filled before moving to next page
         // Throw alerts if a field isn't filled
         return true
