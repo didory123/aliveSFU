@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152BEDA8A61E69D1C10D231D /* Pods_AliveSFU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD78908990C29E09320A596 /* Pods_AliveSFU.framework */; };
 		38ACDECF1DEBCDF3009BD164 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDECD1DEBCDF3009BD164 /* ExerciseCell.swift */; };
 		38ACDED01DEBCDF3009BD164 /* ExerciseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38ACDECE1DEBCDF3009BD164 /* ExerciseCell.xib */; };
 		38ACDED91DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDED81DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift */; };
 		38ACDEDB1DEECA6F009BD164 /* TutorialInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */; };
+		38ACDEDF1DEF85BB009BD164 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38ACDEDE1DEF85BB009BD164 /* GoogleService-Info.plist */; };
 		38E002291DEB6C7A0086A43F /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */; };
 		41B003981DC5B1FC00762D2E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B003971DC5B1FC00762D2E /* Exercise.swift */; };
+		7682509AA401559A806EF2AD /* Pods_AliveSFUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4A8615C4136FB50B93B7F1 /* Pods_AliveSFUUITests.framework */; };
+		A3F9DD05705D1D0C028CC43F /* Pods_AliveSFUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC37F1EF19C64B9A2F31CDB /* Pods_AliveSFUTests.framework */; };
 		A90440981DCEDF2700C77EEE /* PopoverCardioTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90440971DCEDF2700C77EEE /* PopoverCardioTile.swift */; };
 		A91D9D1A1DCC634F00603AC6 /* StrengthTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */; };
 		A91D9D1E1DCC6C6600603AC6 /* StrengthTileViewUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */; };
@@ -118,12 +122,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		11A1B115CFDA3F94F5D242BA /* Pods-AliveSFUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliveSFUUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliveSFUUITests/Pods-AliveSFUUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B6D1C34E7BF468FDFE9EF27 /* Pods-AliveSFU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliveSFU.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliveSFU/Pods-AliveSFU.release.xcconfig"; sourceTree = "<group>"; };
+		2FC37F1EF19C64B9A2F31CDB /* Pods_AliveSFUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliveSFUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38ACDECD1DEBCDF3009BD164 /* ExerciseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
 		38ACDECE1DEBCDF3009BD164 /* ExerciseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseCell.xib; sourceTree = "<group>"; };
 		38ACDED81DEEC3A8009BD164 /* TutorialsDisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialsDisclaimerViewController.swift; sourceTree = "<group>"; };
 		38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialInstructionsViewController.swift; sourceTree = "<group>"; };
+		38ACDEDE1DEF85BB009BD164 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
+		3FD78908990C29E09320A596 /* Pods_AliveSFU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliveSFU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B003971DC5B1FC00762D2E /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		5B4A8615C4136FB50B93B7F1 /* Pods_AliveSFUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AliveSFUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C73233D99D963DFC9C5A030 /* Pods-AliveSFUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliveSFUTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliveSFUTests/Pods-AliveSFUTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A194B43BDCC169D50B3B6F32 /* Pods-AliveSFUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliveSFUUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliveSFUUITests/Pods-AliveSFUUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A90440971DCEDF2700C77EEE /* PopoverCardioTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCardioTile.swift; sourceTree = "<group>"; };
 		A91D9D191DCC634F00603AC6 /* StrengthTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrengthTileView.swift; sourceTree = "<group>"; };
 		A91D9D1D1DCC6C6600603AC6 /* StrengthTileViewUI.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StrengthTileViewUI.xib; sourceTree = "<group>"; };
@@ -169,6 +181,7 @@
 		A9DD17611DC968F300979495 /* AppDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataController.swift; sourceTree = "<group>"; };
 		A9FCD5E51DDF19CF00A75BCC /* AliveSFU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AliveSFU.entitlements; sourceTree = "<group>"; };
 		A9FCD5E71DDF19CF00A75BCC /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C08B7DBDE6F9243638D5C83B /* Pods-AliveSFU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliveSFU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AliveSFU/Pods-AliveSFU.debug.xcconfig"; sourceTree = "<group>"; };
 		C699DB831DCDD7E50088CAEE /* JBChart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JBChart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C699DB851DCDD7E50088CAEE /* JBChart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBChart.h; sourceTree = "<group>"; };
 		C699DB861DCDD7E50088CAEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +194,7 @@
 		C699DBA51DCDD8570088CAEE /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
 		C699DBA61DCDD8570088CAEE /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
 		C699DBA71DCDD8570088CAEE /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		E15E8DD51BC88478B9E03D71 /* Pods-AliveSFUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AliveSFUTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AliveSFUTests/Pods-AliveSFUTests.release.xcconfig"; sourceTree = "<group>"; };
 		FA7FB3161DC333BD00781EFB /* PopoverStrengthTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverStrengthTile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +205,7 @@
 			files = (
 				C699DB981DCDD7E50088CAEE /* JBChart.framework in Frameworks */,
 				A9FCD5E81DDF19CF00A75BCC /* HealthKit.framework in Frameworks */,
+				152BEDA8A61E69D1C10D231D /* Pods_AliveSFU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F9DD05705D1D0C028CC43F /* Pods_AliveSFUTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7682509AA401559A806EF2AD /* Pods_AliveSFUUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +253,19 @@
 				38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */,
 			);
 			name = Tutorials;
+			sourceTree = "<group>";
+		};
+		A1491180C0EF2D25A7FA4F2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C08B7DBDE6F9243638D5C83B /* Pods-AliveSFU.debug.xcconfig */,
+				1B6D1C34E7BF468FDFE9EF27 /* Pods-AliveSFU.release.xcconfig */,
+				8C73233D99D963DFC9C5A030 /* Pods-AliveSFUTests.debug.xcconfig */,
+				E15E8DD51BC88478B9E03D71 /* Pods-AliveSFUTests.release.xcconfig */,
+				11A1B115CFDA3F94F5D242BA /* Pods-AliveSFUUITests.debug.xcconfig */,
+				A194B43BDCC169D50B3B6F32 /* Pods-AliveSFUUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A92A2C161DD7D42D00E0B679 /* MyProgress */ = {
@@ -335,6 +365,7 @@
 				C699DB911DCDD7E50088CAEE /* JBChartTests */,
 				A9AE2C141DC17F9900FB5BC0 /* Products */,
 				A9FCD5E61DDF19CF00A75BCC /* Frameworks */,
+				A1491180C0EF2D25A7FA4F2A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -353,6 +384,7 @@
 		A9AE2C151DC17F9900FB5BC0 /* AliveSFU */ = {
 			isa = PBXGroup;
 			children = (
+				38ACDEDE1DEF85BB009BD164 /* GoogleService-Info.plist */,
 				A9FCD5E51DDF19CF00A75BCC /* AliveSFU.entitlements */,
 				A9AE2C1F1DC17F9900FB5BC0 /* Assets.xcassets */,
 				A92A2C171DD7D5BA00E0B679 /* Top Level View Controllers */,
@@ -396,6 +428,9 @@
 			isa = PBXGroup;
 			children = (
 				A9FCD5E71DDF19CF00A75BCC /* HealthKit.framework */,
+				3FD78908990C29E09320A596 /* Pods_AliveSFU.framework */,
+				2FC37F1EF19C64B9A2F31CDB /* Pods_AliveSFUTests.framework */,
+				5B4A8615C4136FB50B93B7F1 /* Pods_AliveSFUUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -453,10 +488,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9AE2C3D1DC17F9900FB5BC0 /* Build configuration list for PBXNativeTarget "AliveSFU" */;
 			buildPhases = (
+				D577001A4A205E4D7E21DF75 /* [CP] Check Pods Manifest.lock */,
 				A9AE2C0F1DC17F9900FB5BC0 /* Sources */,
 				A9AE2C101DC17F9900FB5BC0 /* Frameworks */,
 				A9AE2C111DC17F9900FB5BC0 /* Resources */,
 				C699DB9F1DCDD7E50088CAEE /* Embed Frameworks */,
+				A6220748489FCD5177705D80 /* [CP] Embed Pods Frameworks */,
+				95180B4706ACA86192D49BB3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -472,9 +510,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9AE2C401DC17F9900FB5BC0 /* Build configuration list for PBXNativeTarget "AliveSFUTests" */;
 			buildPhases = (
+				F41626D6896202D231D09358 /* [CP] Check Pods Manifest.lock */,
 				A9AE2C251DC17F9900FB5BC0 /* Sources */,
 				A9AE2C261DC17F9900FB5BC0 /* Frameworks */,
 				A9AE2C271DC17F9900FB5BC0 /* Resources */,
+				57B7875D2843E495FE6733BD /* [CP] Embed Pods Frameworks */,
+				08AD0156DF7AD80CCA7392C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -490,9 +531,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9AE2C431DC17F9900FB5BC0 /* Build configuration list for PBXNativeTarget "AliveSFUUITests" */;
 			buildPhases = (
+				5C36002011F91F50C6B31676 /* [CP] Check Pods Manifest.lock */,
 				A9AE2C301DC17F9900FB5BC0 /* Sources */,
 				A9AE2C311DC17F9900FB5BC0 /* Frameworks */,
 				A9AE2C321DC17F9900FB5BC0 /* Resources */,
+				4EA7977984BD0315A0F01491 /* [CP] Embed Pods Frameworks */,
+				CEF82E8E0FFCE5A4124A854C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -612,6 +656,7 @@
 			files = (
 				A92A2C201DDA826900E0B679 /* firstTime.storyboard in Resources */,
 				38ACDED01DEBCDF3009BD164 /* ExerciseCell.xib in Resources */,
+				38ACDEDF1DEF85BB009BD164 /* GoogleService-Info.plist in Resources */,
 				A92A2C1B1DD7E11900E0B679 /* login.storyboard in Resources */,
 				A98570621DC2E7FF00C3AA32 /* Main.storyboard in Resources */,
 				A91D9D1E1DCC6C6600603AC6 /* StrengthTileViewUI.xib in Resources */,
@@ -650,6 +695,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08AD0156DF7AD80CCA7392C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliveSFUTests/Pods-AliveSFUTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EA7977984BD0315A0F01491 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliveSFUUITests/Pods-AliveSFUUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57B7875D2843E495FE6733BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliveSFUTests/Pods-AliveSFUTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C36002011F91F50C6B31676 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95180B4706ACA86192D49BB3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliveSFU/Pods-AliveSFU-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6220748489FCD5177705D80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliveSFU/Pods-AliveSFU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEF82E8E0FFCE5A4124A854C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AliveSFUUITests/Pods-AliveSFUUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D577001A4A205E4D7E21DF75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F41626D6896202D231D09358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9AE2C0F1DC17F9900FB5BC0 /* Sources */ = {
@@ -872,6 +1055,7 @@
 		};
 		A9AE2C3E1DC17F9900FB5BC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C08B7DBDE6F9243638D5C83B /* Pods-AliveSFU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -890,6 +1074,7 @@
 		};
 		A9AE2C3F1DC17F9900FB5BC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6D1C34E7BF468FDFE9EF27 /* Pods-AliveSFU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -907,6 +1092,7 @@
 		};
 		A9AE2C411DC17F9900FB5BC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C73233D99D963DFC9C5A030 /* Pods-AliveSFUTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -921,6 +1107,7 @@
 		};
 		A9AE2C421DC17F9900FB5BC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15E8DD51BC88478B9E03D71 /* Pods-AliveSFUTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -935,6 +1122,7 @@
 		};
 		A9AE2C441DC17F9900FB5BC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11A1B115CFDA3F94F5D242BA /* Pods-AliveSFUUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = AliveSFUUITests/Info.plist;
@@ -948,6 +1136,7 @@
 		};
 		A9AE2C451DC17F9900FB5BC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A194B43BDCC169D50B3B6F32 /* Pods-AliveSFUUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = AliveSFUUITests/Info.plist;
