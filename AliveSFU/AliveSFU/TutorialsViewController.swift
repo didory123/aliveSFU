@@ -16,7 +16,6 @@ class TutorialsViewController: UIViewController, UICollectionViewDataSource, UIS
     @IBOutlet weak var searchBar: UISearchBar!
     let dataSourceManager = TutorialExercisesManager()
     var cells = [TutorialExercise]()
-    let firebase = firebaseController()
     let reuseIdentifier : String = "ExerciseCell"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +98,6 @@ class TutorialsViewController: UIViewController, UICollectionViewDataSource, UIS
 extension TutorialsViewController {
     //1
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        firebase.editUser(newUser: firebaseProfile(devID: "pls", userName: "swiftymcswift", hashNum: 11111))
         cells = dataSourceManager.returnExercisesByKeyword(line: searchText)
         collectionView.reloadData()
         
