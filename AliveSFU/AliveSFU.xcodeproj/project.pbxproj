@@ -13,6 +13,7 @@
 		38ACDEDB1DEECA6F009BD164 /* TutorialInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */; };
 		38ACDEE31DF0FBCA009BD164 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEE21DF0FBCA009BD164 /* FirebaseController.swift */; };
 		38ACDEE51DF103FF009BD164 /* FirebaseProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEE41DF103FF009BD164 /* FirebaseProfile.swift */; };
+		38ACDEE71DF16436009BD164 /* FindBuddyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38ACDEE61DF16436009BD164 /* FindBuddyViewController.swift */; };
 		38E002291DEB6C7A0086A43F /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */; };
 		41B003981DC5B1FC00762D2E /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B003971DC5B1FC00762D2E /* Exercise.swift */; };
 		A90440981DCEDF2700C77EEE /* PopoverCardioTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90440971DCEDF2700C77EEE /* PopoverCardioTile.swift */; };
@@ -127,6 +128,7 @@
 		38ACDEDA1DEECA6F009BD164 /* TutorialInstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialInstructionsViewController.swift; sourceTree = "<group>"; };
 		38ACDEE21DF0FBCA009BD164 /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		38ACDEE41DF103FF009BD164 /* FirebaseProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseProfile.swift; sourceTree = "<group>"; };
+		38ACDEE61DF16436009BD164 /* FindBuddyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBuddyViewController.swift; sourceTree = "<group>"; };
 		38E002281DEB6C7A0086A43F /* TutorialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
 		41B003971DC5B1FC00762D2E /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		A90440971DCEDF2700C77EEE /* PopoverCardioTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCardioTile.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				A95986871DEF7E23005CFFE9 /* SearchTile.xib */,
 				38ACDEE21DF0FBCA009BD164 /* FirebaseController.swift */,
 				38ACDEE41DF103FF009BD164 /* FirebaseProfile.swift */,
+				38ACDEE61DF16436009BD164 /* FindBuddyViewController.swift */,
 			);
 			name = "Fitness Buddy Finder";
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				38E002291DEB6C7A0086A43F /* TutorialsViewController.swift in Sources */,
 				A959868A1DEF8AEA005CFFE9 /* BuddyFinderSettings.swift in Sources */,
 				A9B0D06E1DEEC7A2004CBF4D /* BuddyProfile.swift in Sources */,
+				38ACDEE71DF16436009BD164 /* FindBuddyViewController.swift in Sources */,
 				A9AE2C171DC17F9900FB5BC0 /* AppDelegate.swift in Sources */,
 				A9B0D0701DEEC841004CBF4D /* FirstTimeBuddyFinder.swift in Sources */,
 				A9A729D61DE269E00085D399 /* MyProfileViewController.swift in Sources */,

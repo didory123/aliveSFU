@@ -549,7 +549,10 @@ class DataHandler {
             print("Could not save \(error), \(error.userInfo)")
         }
     }
+}
 
+//MARK : Fitness Buddy 
+extension DataHandler {
     class func saveBuddyProfile(bd: BuddyDetails) -> Int {
         
         let moc = AppDataController().managedObjectContext
@@ -561,7 +564,7 @@ class DataHandler {
         do {
             var fetchedResult = try moc.fetch(details) as! [NSManagedObject]
             let mo = fetchedResult[0]
-
+            
             mo.setValue(bd.gender, forKey: "gender")
             mo.setValue(bd.ageGroup, forKey: "ageGroup")
             mo.setValue(bd.fitnessFreq, forKey: "frequency")
@@ -590,7 +593,7 @@ class DataHandler {
         do {
             var fetchedResult = try moc.fetch(details) as! [NSManagedObject]
             let mo = fetchedResult[0]
-
+            
             mo.setValue(bd.gender, forKey: "gender")
             mo.setValue(bd.ageGroup, forKey: "ageGroup")
             mo.setValue(bd.fitnessFreq, forKey: "frequency")
@@ -645,5 +648,37 @@ class DataHandler {
             fatalError("Failed to fetch array! Error: \(error)")
         }
         return false
+    }
+}
+
+//MARK : Firebase Stuff
+extension DataHandler {
+    class func getPushID() -> String {
+        
+        let moc = AppDataController().managedObjectContext
+        
+        let details = NSFetchRequest<NSFetchRequestResult>(entityName: "FirebaseProfile")
+        details.predicate = NSPredicate(format: "primaryKey = 1")
+        do {
+            let fetchedResults = try moc.fetch(details) as! [NSManagedObject]
+            let mo = fetchedResults[0]
+            
+            return mo.value(forKey: "pushID") as! String
+            
+        } catch {
+            fatalError("Failed to fetch array! Error: \(error)")
+        }
+    }
+    class func setPushID(pushID : String) {
+        
+        let moc = AppDataController().managedObjectContext
+        
+        let fb = NSEntityDescription.insertNewObject(forEntityName: "FirebaseProfile", into: moc)
+        fb.setValue(pushID, forKey: "pushID")
+        do {
+            try moc.save()
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
     }
 }

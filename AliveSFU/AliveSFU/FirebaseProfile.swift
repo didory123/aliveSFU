@@ -9,6 +9,7 @@
 import Foundation
 
 class firebaseProfile {
+    var id: String = ""
     var devID : String = ""
     var userName : String = ""
     var hashNum : Int = 0
@@ -21,15 +22,5 @@ class firebaseProfile {
         self.devID = devID
         self.userName = userName
         self.hashNum = hashNum
-    }
-}
-
-//Overloading operators for comparing hashNums
-extension firebaseProfile {
-    static func < (left: firebaseProfile, right: firebaseProfile) -> Bool {
-        return left.hashNum < right.hashNum
-    }
-    static func > (left: firebaseProfile, right: firebaseProfile) -> Bool {
-        return left.hashNum > right.hashNum
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="16B2555" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="BuddyDetails" representedClassName="" syncable="YES">
         <attribute name="ageGroup" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -19,6 +19,10 @@
         <attribute name="sets" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="speed" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FirebaseProfile" syncable="YES">
+        <attribute name="devID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pushID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Flags" syncable="YES">
         <attribute name="enableFitnessBuddy" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -52,10 +56,11 @@
         <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
+        <element name="BuddyDetails" positionX="-54" positionY="108" width="128" height="135"/>
         <element name="Exercise" positionX="-63" positionY="-18" width="128" height="195"/>
         <element name="Flags" positionX="-54" positionY="99" width="128" height="120"/>
         <element name="SleepAnalysis" positionX="-54" positionY="108" width="128" height="165"/>
         <element name="UserDetails" positionX="-63" positionY="54" width="128" height="225"/>
-        <element name="BuddyDetails" positionX="-54" positionY="108" width="128" height="135"/>
+        <element name="FirebaseProfile" positionX="-45" positionY="117" width="128" height="75"/>
     </elements>
 </model>

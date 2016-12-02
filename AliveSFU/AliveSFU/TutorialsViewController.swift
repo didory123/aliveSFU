@@ -98,6 +98,7 @@ class TutorialsViewController: UIViewController, UICollectionViewDataSource, UIS
 extension TutorialsViewController {
     //1
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let ctrl = firebaseController()
         cells = dataSourceManager.returnExercisesByKeyword(line: searchText)
         collectionView.reloadData()
         
