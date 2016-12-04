@@ -767,6 +767,7 @@ Hand your card in at the end of the period and winners will be contacted shortly
                                             <font key="NSFont" size="14" name="Helvetica-Bold"/>
                                             <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -780,17 +781,42 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="How do I activate my Recreation Membership?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
                                         <mutableString key="content">
-How do I activate my Recreation Membership?
 
 Recreation Memberships are included in tuition for students who are registered for 3 or more credits and who are not registered in designated “off-campus” programs (may include distance education, co-op, on-line courses and some graduate students)
 
 How to Activate your Membership:
  1)      Check your Membership eligibility 2)      Complete a waiver 3)      Bring your ID Card to access Recreation facilities and services
 
-
-
-What can I access with my Recreation Membership?
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="What can I access with my Recreation Membership?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 Burnaby Recreation Members have access to the Fitness Centre, Drop-in Swim, Drop-in Sports, Intramural Leagues, squash, racquetball, and tennis courts, table tennis, and the outdoor track. Recreation programs are open to non-members but program participants are still required to agree to and submit a waiver form.
 
@@ -801,16 +827,55 @@ An SFU Surrey Recreation Membership provides access to City of Surrey operated f
 The SFU Vancouver Recreation Membership provides access to Vancouver Parks Board operated fitness centres, public skating, and public swimming sessions during operating hours at participating facilities.
 
 
-How is my Recreation Membership linked to my SFU Card?
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="How is my Recreation Membership linked to my SFU Card?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 If you meet the Membership eligibility criteria and have completed the waiver online, your Recreation Membership will automatically be linked to your SFU Card and you DO NOT need to visit the Recreation Office. 
 
-How do I complete the waiver form?
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="How do I complete the waiver form?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 Eligible students are still required to agree to and submit a waiver form. The waiver can now be completed online! 
 1) Login to the Student Information System 2) Click on: “Complete SFU Athletics &amp; Recreation Waiver Now” 3) Read and agree to the waiver
 
-Do I need to visit the Recreation Office?
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Do I need to visit the Recreation Office?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 Students only need to visit the Recreation Office if they:
 - Want to complete a paper waiver instead of completing it online. - Do not meet the Membership eligibility criteria - Are FIC or exchange students - Want to purchase a Membership for a family member (see Family Membership information below). - Want to purchase a book or gym locker. 
@@ -917,27 +982,9 @@ Cg
 Cg
 </string>
                                         <attributes>
-                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                            <font key="NSFont" size="16" name="Cambria"/>
-                                            <real key="NSKern" value="0.0"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="16" minimumLineHeight="19" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                <tabStops/>
-                                            </paragraphStyle>
-                                            <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                            <real key="NSStrokeWidth" value="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">
-
-MEMBERSHIP FAQ
-
-</string>
-                                        <attributes>
                                             <color key="NSColor" red="0.27059" green="0.27059" blue="0.27059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="12" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" paragraphSpacing="16" minimumLineHeight="19" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                 <tabStops/>
                                             </paragraphStyle>
                                         </attributes>
@@ -946,8 +993,8 @@ MEMBERSHIP FAQ
                                         <string key="content">Are FIC students eligible for a Recreation Membership?
 </string>
                                         <attributes>
-                                            <font key="NSFont" size="14" name="Helvetica"/>
-                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" lineSpacing="1" defaultTabInterval="28" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                 <tabStops/>
                                             </paragraphStyle>
