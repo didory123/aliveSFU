@@ -1,3 +1,4 @@
+
 //
 //  BuddyTileView.swift
 //  AliveSFU
@@ -16,6 +17,9 @@ class BuddyTileView: UIView {
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var freq: UILabel!
     @IBOutlet weak var goals: UILabel!
+    
+    var isDeleted: Bool = false
+    var uuid: String = ""
     
     let TILE_HEIGHT = CGFloat(20);
     let PADDING = CGFloat(20);
@@ -40,4 +44,12 @@ class BuddyTileView: UIView {
         super.init(coder: aDecoder);
     }
     
+    func setIsDeleted(){
+        isDeleted = true;
+    }
+    
+    func getIsDeleted() -> Bool {
+        return isDeleted
+    }
 }
+

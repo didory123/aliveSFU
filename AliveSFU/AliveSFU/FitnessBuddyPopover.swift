@@ -18,6 +18,8 @@ class FitnessBuddyPopover: UIViewController {
     @IBOutlet weak var rejectButton: UIButton!
     weak var rootViewController: UIViewController? //TODO: find something more elegant
     
+    var uuid: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.8)
