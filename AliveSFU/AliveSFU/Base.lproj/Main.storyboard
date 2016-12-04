@@ -766,7 +766,7 @@ Hand your card in at the end of the period and winners will be contacted shortly
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica-Bold"/>
                                             <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -776,7 +776,7 @@ Cg
                                         <attributes>
                                             <font key="NSFont" size="14" name="Helvetica"/>
                                             <font key="NSOriginalFont" size="14" name="Helvetica"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
@@ -961,17 +961,81 @@ FIC students can activate their Recreation Membership by:
 After the waiver form has been submitted, the Recreation Membership will be linked directly to the FIC card. The Membership will be active for one semester, provided that the individual remains an active FIC student and meets eligibility criteria over that timeframe.
 
 
-ASK A TRAINER!
-
-What foods do you recommend to help decrease fat content and increase the rate of weight loss?                                                                 
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ASK A TRAINER!">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="What foods do you recommend to help decrease fat content and increase the rate of weight loss?  ">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">                                                               
 
 To increase weight loss and aid in fat loss a balanced diet with lean protein, healthy fats and complex carbohydrates is essential. Lean protein could include eggs, chicken breast or fish. Healthy fats could include Avocado or nuts and seeds, and complex carbs like brown rice are great. Also make sure to include fruits and vegetables in order to get essential vitamins and nutrients your body needs. Remember that, in order to lose weight, the calories you burn in a day must be more than what you are consuming. 
 
-I am trying to work out regularly from past three weeks. After how long will I see the difference in my body structure?
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="I am trying to work out regularly from past three weeks. After how long will I see the difference in my body structure?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 Assuming that you have a good diet and provide enough stimulation to your muscles, you should see a difference in 3 months. Please note that this is just a general guideline because it also depends on genes. Also, other people might/will notice the difference before you do. 
 
-How do I get rid of belly fat?
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="How do I get rid of belly fat?">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 A mixture of diet, cardio and resistance training will help you reduce fat. However, it is important to keep in mind that you cannot lose fat in one specific part of your body i.e. using techniques to reduce fat throughout the body will be effective for the belly too. For diet you will want to keep an eye on your caloric balance making sure Caloric Expenditure is greater than Caloric Intake. Running, Biking and Circuit training are a few of many cardio exercises that will help with your goal. 
 Resistance training using compound exercises that recruit many muscle groups is a good way to build lean muscles which burn fat when you are at rest. Some good compound exercises are: Squats, lunges, bench press and rows. Abdominal exercises for example plank or crunch will build and help to define your abdominal muscles. 
@@ -993,7 +1057,21 @@ Resistance training using compound exercises that recruit many muscle groups is 
 
 Stretching helps improve flexibility and range of motion. It will also aid in recovery of your muscles as it helps with circulation. This is important since recovery is needed for muscle growth and development. Moreover, with increases flexibility and increased range of motion, stretching will help prevent injuries. 
 
-I know I shouldn’t be eating before bed, but ever since I’ve started working out on a regular basis I have been waking up in the middle of the night painfully hungry. Should I try to ignore the pain or are there healthy foods I can eat before bed to mitigate this?
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">I know I shouldn’t be eating before bed, but ever since I’ve started working out on a regular basis I have been waking up in the middle of the night painfully hungry. Should I try to ignore the pain or are there healthy foods I can eat before bed to mitigate this?</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="Helvetica-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
 
 There are definitely healthy options for snacks to eat before bed to decrease your hunger at night. Complex carbohydrates are best because they have finer (which will keep you full) as well as vitamins and minerals. Avoid high protein foods as there are some claims that protein is hard to digest so it many disrupt your sleep. Some examples of food you could try could be a banana, oatmeal, whole grain cereal with low fat milk, or yogurt with fresh fruit. Avoid processed foods as they tend to have higher levels of sugar, fat, and salt and are not as nutritionally dense as other options. Make sure you are also eating enough during the day to suit your new active lifestyle.
 
