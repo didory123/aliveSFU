@@ -70,6 +70,7 @@
 		C699DBAB1DCDD8570088CAEE /* JBChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C699DBA51DCDD8570088CAEE /* JBChartView.m */; };
 		C699DBAC1DCDD8570088CAEE /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = C699DBA61DCDD8570088CAEE /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C699DBAD1DCDD8570088CAEE /* JBLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = C699DBA71DCDD8570088CAEE /* JBLineChartView.m */; };
+		FA31EAB11DF0D73A00B8F930 /* BuddyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31EAB01DF0D73A00B8F930 /* BuddyNumber.swift */; };
 		FA7FB3171DC333BD00781EFB /* PopoverStrengthTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7FB3161DC333BD00781EFB /* PopoverStrengthTile.swift */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +198,7 @@
 		C699DBA51DCDD8570088CAEE /* JBChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBChartView.m; sourceTree = "<group>"; };
 		C699DBA61DCDD8570088CAEE /* JBLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartView.h; sourceTree = "<group>"; };
 		C699DBA71DCDD8570088CAEE /* JBLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartView.m; sourceTree = "<group>"; };
+		FA31EAB01DF0D73A00B8F930 /* BuddyNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuddyNumber.swift; sourceTree = "<group>"; };
 		FA7FB3161DC333BD00781EFB /* PopoverStrengthTile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverStrengthTile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +328,7 @@
 				A9B0D06D1DEEC7A2004CBF4D /* BuddyProfile.swift */,
 				A9B0D06F1DEEC841004CBF4D /* FirstTimeBuddyFinder.swift */,
 				A95986891DEF8AEA005CFFE9 /* BuddyFinderSettings.swift */,
+				FA31EAB01DF0D73A00B8F930 /* BuddyNumber.swift */,
 				A94E5DBE1DEE83FF003CBA51 /* IncomingRequests.swift */,
 				A95986871DEF7E23005CFFE9 /* BuddyTile.xib */,
 				A92143D21DF26643004E27DA /* BuddyTileView.swift */,
@@ -697,6 +700,7 @@
 				A9AE2C4B1DC1824C00FB5BC0 /* SleepAnalysisController.swift in Sources */,
 				38ACDECF1DEBCDF3009BD164 /* ExerciseCell.swift in Sources */,
 				A9AE2C1B1DC17F9900FB5BC0 /* SFURecreationController.swift in Sources */,
+				FA31EAB11DF0D73A00B8F930 /* BuddyNumber.swift in Sources */,
 				38E002291DEB6C7A0086A43F /* TutorialsViewController.swift in Sources */,
 				A959868A1DEF8AEA005CFFE9 /* BuddyFinderSettings.swift in Sources */,
 				A9B0D06E1DEEC7A2004CBF4D /* BuddyProfile.swift in Sources */,

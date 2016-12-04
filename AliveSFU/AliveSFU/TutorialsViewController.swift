@@ -68,8 +68,9 @@ class TutorialsViewController: UIViewController, UICollectionViewDataSource, UIS
         
         //when the segue to the instructions page happens, send in the cell exercise object as wellß
         if segue.identifier == "toInstructionsPageSegue" {
+            let exercise = (sender as? TutorialExercise)!
             let newViewController = segue.destination as! TutorialInstructionsViewController
-            newViewController.exercise = (sender as? TutorialExercise)!
+            newViewController.exercise = exercise
         }
     }
     // Set the indexPath of the selected item as the sender for the segue
@@ -135,6 +136,34 @@ class TutorialExercisesManager {
                 for element in array {
                     if let jsonObj = element as? [String: Any] {
                         let newExercise = TutorialExercise()
+                        //if there are any specified keywords associated with this exercise
+                        if let keywords = jsonObj["keywords"] as? [Any] {
+                            for keyword in keywords {
+                                newExercise.keywords.append(keyword as! String)
+                            }
+                        }
+                        //get each step of this exercise's instructions
+                        if let steps = jsonObj["steps"] as? [Any] {
+                            for step in steps {
+                                newExercise.steps.append(step as! String)
+                            }
+                        }
+                        //if there are any extra steps specified
+                        //extra steps are steps that are added at the end of the actual instruction set as sort of an addendum
+                        if let extraSteps = jsonObj["extraSteps"] as? [String : Any] {
+                            if let texts = extraSteps["text"] as? [Any] {
+                                for text in texts {
+                                    newExercise.extraSteps.append(text as! String)
+                                }
+                            }
+                            if let images = extraSteps["images"] as? [Any] {
+                                for image in images {
+                                    newExercise.extraImages.append(image as! String)
+                                }
+                            }
+                        }
+                        
+                        //get other regular exercise properties
                         if let name = jsonObj["name"] as? String {
                             newExercise.name = name
                         }
@@ -169,6 +198,10 @@ class TutorialExercisesManager {
 
 //Class defining a tutorial exercise
 class TutorialExercise {
+    var keywords = [String]()
+    var steps = [String]()
+    var extraImages = [String]()
+    var extraSteps = [String]()
     var name: String = ""
     var equipmentName: String = ""
     var targetMuscle : String = ""
@@ -178,11 +211,16 @@ class TutorialExercise {
     
     //checking if any of the fields match a user's keyword
     func contains(keyword : String) -> Bool {
+        for elem in keywords {
+            if elem.contains(keyword) {
+                return true
+            }
+        }
         if (name.contains(keyword) || equipmentName.contains(keyword) || targetMuscle.contains(keyword)) {
             return true
         }
-        else {
-            return false
-        }
+        //no keywords match
+        return false
+        
     }
 }

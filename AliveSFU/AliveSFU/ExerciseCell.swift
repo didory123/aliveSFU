@@ -15,7 +15,14 @@ class ExerciseCell: UICollectionViewCell {
 
     func configure(exercise : TutorialExercise)
     {
-        self.exerciseThumbnail.image = UIImage(named: exercise.name)
+        //for the reverse pec dec exercise the step 2 image should be used as the thumbnail
+        //adding this hackity hack hack hackz in the code
+        if exercise.name == "Reverse Pec Dec" {
+            self.exerciseThumbnail.image = UIImage(named: exercise.name + " 2")
+        }
+        else {
+            self.exerciseThumbnail.image = UIImage(named: exercise.name + " 1")
+        }
         exerciseName.text = exercise.name
     }
 }
