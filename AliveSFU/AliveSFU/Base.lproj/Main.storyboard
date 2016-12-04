@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -707,47 +707,130 @@
                         <viewControllerLayoutGuide type="bottom" id="RYK-1B-Z2S"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0Yz-gf-3J8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="970"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIu-Mc-LLd" userLabel="Label">
-                                <rect key="frame" x="15" y="72" width="345" height="64"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j7U-Pi-Qfc">
+                                <rect key="frame" x="-5" y="0.0" width="385" height="970"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OX-vl-ypc">
-                                        <rect key="frame" x="127.5" y="6" width="90.5" height="52"/>
-                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="45"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="highlightedColor" red="0.98422783609999998" green="0.98436874149999998" blue="0.98419696089999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TIu-Mc-LLd" userLabel="Label">
+                                        <rect key="frame" x="20" y="20" width="345" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OX-vl-ypc">
+                                                <rect key="frame" x="127.5" y="6" width="90.5" height="52"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="45"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="highlightedColor" red="0.98422783609999998" green="0.98436874149999998" blue="0.98419696089999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6OX-vl-ypc" firstAttribute="centerX" secondItem="TIu-Mc-LLd" secondAttribute="centerX" id="JnL-cV-tPD"/>
+                                            <constraint firstItem="6OX-vl-ypc" firstAttribute="top" secondItem="TIu-Mc-LLd" secondAttribute="top" constant="6" id="Mtf-4U-0ck"/>
+                                            <constraint firstItem="6OX-vl-ypc" firstAttribute="centerY" secondItem="TIu-Mc-LLd" secondAttribute="centerY" id="evN-2o-JUB"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sIA-RY-R1Z">
+                                        <rect key="frame" x="22" y="102" width="344" height="126"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">What foods do you recommend to help decrease fat content and increase the rate of weight loss?                                                                 </string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="I am trying to work out regularly from past three weeks. After how long will I see the difference in my body structure?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="473-3r-RgX">
+                                        <rect key="frame" x="23" y="286" width="344" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c4L-AU-rZ1">
+                                        <rect key="frame" x="23" y="350" width="344" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Assuming that you have a good diet and provide enough stimulation to your muscles, you should see a difference in 3 months. Please note that this is just a general guideline because it also depends on genes. Also, other people might/will notice the difference before you do. </string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="How to get rid of belly fat?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n9T-A5-KKO">
+                                        <rect key="frame" x="20" y="449" width="344" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fZ9-NX-imy">
+                                        <rect key="frame" x="22" y="160" width="343" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MG1-ka-0mE">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="118"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EtC-9P-xTM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="118"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tHl-uX-kyL">
+                                        <rect key="frame" x="23" y="145" width="343" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">To increase weight loss and aid in fat loss a balanced diet with lean protein, healthy fats and complex carbohydrates is essential. Lean protein could include eggs, chicken breast or fish. Healthy fats could include Avocado or nuts and seeds, and complex carbs like brown rice are great. Also make sure to include fruits and vegetables in order to get essential vitamins and nutrients your body needs. Remember that, in order to lose weight, the calories you burn in a day must be more than what you are consuming. </mutableString>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LQ3-OE-Hrg">
+                                        <rect key="frame" x="20" y="480" width="344" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <mutableString key="text">A mixture of diet, cardio and resistance training will help you reduce fat. However, it is important to keep in mind that you cannot lose fat in one specific part of your body i.e. using techniques to reduce fat throughout the body will be effective for the belly too. For diet you will want to keep an eye on your caloric balance making sure Caloric Expenditure is greater than Caloric Intake. Running, Biking and Circuit training are a few of many cardio exercises that will help with your goal. Resistance training using compound exercises that recruit many muscle groups is a good way to build lean muscles which burn fat when you are at rest. Some good compound exercises are: Squats, lunges, bench press and rows. Abdominal exercises for example plank or crunch will build and help to define your abdominal muscles. </mutableString>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yMx-LU-ud2">
+                                        <rect key="frame" x="20" y="709" width="346" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">How does Stretching help?</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cEQ-SU-WXj">
+                                        <rect key="frame" x="20" y="740" width="346" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Stretching helps improve flexibility and range of motion. It will also aid in recovery of your muscles as it helps with circulation. This is important since recovery is needed for muscle growth and development. Moreover, with increases flexibility and increased range of motion, stretching will help prevent injuries. </string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.65098039220000004" green="0.098039215690000001" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="6OX-vl-ypc" firstAttribute="centerX" secondItem="TIu-Mc-LLd" secondAttribute="centerX" id="JnL-cV-tPD"/>
-                                    <constraint firstItem="6OX-vl-ypc" firstAttribute="top" secondItem="TIu-Mc-LLd" secondAttribute="top" constant="6" id="Mtf-4U-0ck"/>
-                                    <constraint firstItem="6OX-vl-ypc" firstAttribute="centerY" secondItem="TIu-Mc-LLd" secondAttribute="centerY" id="evN-2o-JUB"/>
+                                    <constraint firstItem="TIu-Mc-LLd" firstAttribute="centerX" secondItem="j7U-Pi-Qfc" secondAttribute="centerX" id="7GP-i5-QYV"/>
+                                    <constraint firstItem="TIu-Mc-LLd" firstAttribute="width" secondItem="j7U-Pi-Qfc" secondAttribute="width" constant="-40" id="Egf-W1-GtN"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="100"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="TIu-Mc-LLd" firstAttribute="centerX" secondItem="0Yz-gf-3J8" secondAttribute="centerX" id="E5U-Tx-1FC"/>
-                            <constraint firstItem="TIu-Mc-LLd" firstAttribute="top" secondItem="a7M-sY-HIc" secondAttribute="bottom" constant="8" id="Xv9-Fx-gcb"/>
-                            <constraint firstItem="TIu-Mc-LLd" firstAttribute="width" secondItem="0Yz-gf-3J8" secondAttribute="width" constant="-30" id="eS1-hg-Odu"/>
-                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="970"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeA-om-Cfs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2036" y="3050"/>
+            <point key="canvasLocation" x="-2004" y="3811.394302848576"/>
         </scene>
         <!--Tutorials View Controller-->
         <scene sceneID="oUu-Co-1zs">
