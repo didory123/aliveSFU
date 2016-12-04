@@ -61,8 +61,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.window?.makeKeyAndVisible()
             }
         }
+
+        //perform background fetch every minute
+        UIApplication.shared.setMinimumBackgroundFetchInterval(60)
+
+        //IMPORTANT: 
+        //Set the background fetch interval to 'Never' when the user logs out
+        //UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalNever)
+
         return true
-    }/*
+    }
+    
+    // performs background fetch
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        getRequests()
+        completionHandler(.newData)
+
+    }
+    
+    func getRequests() {
+    
+        //grab requests data from Firebase here
+        var ctrl = firebaseController()
+    }
+    /*
     func application(application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
         return true
     }
