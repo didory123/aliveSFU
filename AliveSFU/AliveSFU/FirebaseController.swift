@@ -173,13 +173,13 @@ class firebaseController {
                         else {
                             continue
                         }
-                        /*
-                        if let hashnum = userProfile.key as? String {
+                        
+                        if let hashnum = userProfile.value as? String {
                             request.hashNum = Int(hashnum)!
                         }
                         else {
                             continue
-                        }*/
+                        }
                         profiles.append(request)
                         //DataHandler.addIncomingRequest(req: request)
                     }
@@ -202,8 +202,9 @@ class firebaseController {
     //send a request to this user
     func sendRequest(user: firebaseProfile) {
         let username = DataHandler.getCurrentUser()
+        let num = DataHandler.getHashNum()
         let requrl = URL(string : "https://alivesfu-30553.firebaseio.com/\(user.userName)/requests.json?auth=\(databaseKey)")!
-        let postString = "{\"" + username! + "\": \"from\"}"//"{\"requests\": {\"" + username! + "\": \"from\"}}"
+        let postString = "{\"" + username! + "\": \"" + String(num) + "\"}"//"{\"requests\": {\"" + username! + "\": \"from\"}}"
         var request = URLRequest(url: requrl)
         request.httpMethod = requestType.PATCH.rawValue //making a PUT request
         
