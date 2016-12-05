@@ -78,6 +78,7 @@ class SearchResultController: UIViewController, UIGestureRecognizerDelegate {
         popoverVC.view.frame = self.view.frame
         popoverVC.view.tag = 600
         popoverVC.rootViewController = self
+        popoverVC.acceptButton.isHidden = true
         self.view.addSubview(popoverVC.view)
         
         let tile = sender.view as! BuddyTileView
@@ -115,8 +116,8 @@ class SearchResultController: UIViewController, UIGestureRecognizerDelegate {
                 tile.dbprofile = buddy
                 
                 //don't add the popup for regular display
-                //let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showPopup(_:)))
-                //tile.addGestureRecognizer(tapGesture)
+                let tapGesture = UITapGestureRecognizer(target: self, action:  #selector (self.showPopup(_:)))
+                tile.addGestureRecognizer(tapGesture)
                 
                 let slideGesture = UIPanGestureRecognizer(target: self, action: #selector (self.tileSlideGesture(_:)))
                 slideGesture.delegate = self
